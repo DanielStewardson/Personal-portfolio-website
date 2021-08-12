@@ -1,0 +1,31 @@
+.transition-1 {
+    position: fixed;
+    width: 100%;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+    background-color: darkorange;
+    
+}
+
+.transition-1.is-active {
+    right: 0;
+    transition: right .3s ease-out;
+}
+
+.transition-2 {
+    position: fixed;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+    background-color: darkorange;
+    transition: left .3s ease-out;
+}
+
+.transition-2.is-active-2 {
+    left: 0;
+
+}

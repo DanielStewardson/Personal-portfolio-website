@@ -1,0 +1,282 @@
+body, html, li, ul, nav, div, header, img, input, span, h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+ }
+
+body {
+    font-weight: normal;
+    background-color: hsl(0, 0%, 3%);
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(235, 235, 235);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkorange;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .blinker {
+    animation: blinker 1s step-start infinite;
+  }
+
+/*------------------------------ Scroll bar ----------------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 3%); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: darkorange; 
+    border-radius: 25px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(41, 95%, 63%); 
+  }
+
+/*------------------------------ Nav bar ----------------------------------*/
+
+.top-nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 10;
+}
+
+.top-nav a {
+    margin: 0 2rem;
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(235, 235, 235);
+}
+
+.nav-button {
+    display: none;
+}
+
+.nav-button-label {
+    margin-right: 2rem;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+.nav-button-label span,
+.nav-button-label span::before,
+.nav-button-label span::after {
+    display: block;
+    background-color: rgb(235, 235, 235);
+    height: 3px;
+    width: 2.2rem;
+    position: relative;
+    transition: .5s ease,
+                background-color 0s;
+}
+
+.nav-button-label span::before,
+.nav-button-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-button-label span::before {
+    bottom: 12px;
+}
+
+.nav-button-label span::after {
+    top: 12px;
+}
+
+.nav-button-label span:hover,
+.nav-button-label span:hover::before,
+.nav-button-label span:hover::after {
+    background-color: darkorange;
+}
+
+.top-nav a:hover,
+.top-nav a:focus {
+    color: darkorange;
+}
+
+/* -------------------------- Button spin ----------------------------- */
+
+.nav-button:checked ~ label span {
+    transform: rotate(45deg);
+    transition: transform .5s;
+}
+
+.nav-button:checked ~ label span::before {
+    bottom: 0;
+    transform: rotate(90deg);
+    transition: bottom .5s, transform .5s ease;
+}
+
+.nav-button:checked ~ label span::after {
+    top: 0;
+    transition: top .5s ease;
+}
+
+/* -------------------------- Slide nav page ----------------------------- */
+
+.slide-nav {
+    z-index: -1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 100%;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    background-color: hsl(0, 0%, 3%);
+    transition: top .8s ease;
+}
+
+.slide-nav ul {
+    list-style: none;
+}
+
+.slide-nav li {
+    padding: 4rem 0;
+}
+
+.slide-nav li a {
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+}
+
+.slide-nav li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: darkorange;
+}
+
+.slide-nav li a:hover::before,
+.slide-nav li a:focus::before {
+    background-color: white;
+    transform: scale(1.6);
+    animation: blinker 1s step-start infinite;
+}
+
+.nav-button:checked ~ .slide-nav {
+    top: 0;
+    transition: top .8s ease .4s;
+}
+
+.nav-button:checked ~ .slide-one {
+    top: 0;
+    transition: top .8s ease;
+}
+
+.slide-one {
+    z-index: -1;
+    position: fixed;
+    top: 100%;
+    height: 100vh;
+    width: 100%;
+    background-color: darkorange;
+    transition: top .8s ease .4s;
+}
+
+/*------------------------------- Header ----------------------------------*/
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.head-wrap {
+    height: 100vh;
+}
+
+.intro-text {
+    position: relative;
+    top: 38%;
+    left: 8%;
+    width: 40rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.intro-text h1 {
+    font-weight: lighter;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    line-height: 1.2;
+} 
+
+.down-arrow {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 3rem;
+}
+
+/*------------------------------- Main ----------------------------------*/
+
+.section {
+    width: 100%;
+}
+
+.wrap {
+    margin: 0 auto;
+    padding: 0;
+    width: 1300px;
+    max-width: 75%;
+}
+
+/*------------------------------- Fill ----------------------------------*/
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    font-size: 1.6rem;
+    font-family: 'Press Start 2P', cursive;
+    /* font-family: 'Monoton', cursive; */
+}
+
+.fill h2 {
+    font-weight: normal;
+    color: rgb(235, 235, 235);
+}
+
+.fill span {
+    color: rgb(255, 0, 149);
+}
+
+/*------------------------------- About ----------------------------------*/
+
