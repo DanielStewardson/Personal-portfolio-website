@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
+<html lang='en'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/transitions.css">
+        <link rel="stylesheet" href="../css/projects.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -19,6 +20,7 @@
 
  
         <script src="../js/main.js" async defer></script>
+        <script src="../js/tiles.js" async defer></script>
     </head>
 
     <body class='index'>
@@ -27,7 +29,7 @@
         <div class="transition-2 is-active-2"></div>
        
         <nav class='top-nav'>
-            <div class='logo'><a href='../index.html'>D.S.</a></div>
+            <div class='logo'><a href='../index.html' class="slide">D.S.</a></div>
             
             <input type='checkbox' class='nav-button' id='nav-button'>
             <label for='nav-button' class='nav-button-label'>
@@ -38,32 +40,98 @@
             
             <nav class='slide-nav'>
                 <ul>
-                    <li><a href='../index.html'>Home</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='projects.html'>Projects</a></li>
-                    <li><a href='#'>Contact</a></li>
+                    <li><a href='../index.html' class="slide">Home</a></li>
+                    <li><a href='about.html' class="slide">About</a></li>
+                    <li><a href='projects.html' class="slide">Projects</a></li>
+                    <li><a href='contact.html' class="slide">Contact</a></li>
                 </ul>
             </nav>
         </nav>
 
-
-
-        
         <header>
             <div class='wrap head-wrap'>
                 <article class='intro-text'>
                     <h1><span class="first-letter">T</span>he scrapyard.<br>
-                    Here's some stuff I've bodged together while on my new path<span class="blinker">.</span></h1>
+                    Here's some stuff I've bodged together so far<span class="blinker">.</span></h1>
                 </article>
 
-                <img src='../resources/icons/white-arrow.png' class='down-arrow'>
+                <img src='../resources/icons/white-arrow.png' class='down-arrow blinker'>
             </div>   
         </header>
         
         <main>
-     
+            
+            <section class='section'>
+                <div class='wrap fill'>
+                    <h2>Practice <br><br>&emsp; <span>makes perfect.</span></h2>
+                </div>
+            </section>
+
+            <section class='section'>
+                <div class="wrap">
+                    <article class="projects-intro">
+                        <h2>Projects</h2>
+                        <br><br>
+                        <p>Here's a sample of some things I have created or worked on.</p>
+                    </article> 
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="wrap">
+                    <div class="project-tiles">
+
+                        <div class="project-tile tile-1">
+                            <div class="tile-links">
+                                <a href='https://danielstewardson.github.io/Reactive-nav-bar/' target='_blank' class='tile-link'>Live site</a>
+                                <a href='https://github.com/DanielStewardson/Reactive-nav-bar' target='_blank' class='tile-link'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-2">
+                            <div class="tile-links">
+                                <a href='https://danielstewardson.github.io/Flex-landing-page/' target='_blank' class='tile-link'>Live site</a>
+                                <a href='https://github.com/DanielStewardson/Flex-landing-page' target='_blank' class='tile-link'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-3">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-4">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-5">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-6">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link'>GitHub</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
          
         </main>
+
+        <footer>
+            <p>dan.co</p>
+        </footer>
 
     </body>
 </html>

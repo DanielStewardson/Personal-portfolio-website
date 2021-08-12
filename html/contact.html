@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Daniel Stewardson | Contact</title>
+        <meta name="description" content="Daniel Stewardson's front-end web developer portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/transitions.css">
+        <link rel="stylesheet" href="../css/form.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+ 
+        <script src="../js/main.js" async defer></script>
+    </head>
+
+    <body class='index'>
+
+        <div class="transition-1 is-active"></div>
+        <div class="transition-2 is-active-2"></div>
+       
+        <nav class='top-nav'>
+            <div class='logo'><a href='../index.html' class="slide">D.S.</a></div>
+            
+            <input type='checkbox' class='nav-button' id='nav-button'>
+            <label for='nav-button' class='nav-button-label'>
+                <span></span>
+            </label>
+
+            <div class='slide-one'></div>
+            
+            <nav class='slide-nav'>
+                <ul>
+                    <li><a href='../index.html' class="slide">Home</a></li>
+                    <li><a href='about.html' class="slide">About</a></li>
+                    <li><a href='projects.html' class="slide">Projects</a></li>
+                    <li><a href='contact.html' class="slide">Contact</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+        <header>
+            <div class='wrap head-wrap'>
+                <article class='intro-text'>
+                    <h1><span class="first-letter">G</span>et in touch<span class="blinker">.</span></h1>
+                </article>
+
+                <img src='../resources/icons/white-arrow.png' class='down-arrow blinker'>
+            </div>   
+        </header>
+        
+        <main>
+
+            <section class='section '>
+                <div class='wrap'>
+                    <form action="mailto:danzstewardson@hotmail.com" method="POST" class='contact-form'>
+                        <label for='name'>Name:</label>
+                        <input type="text" id="name" name="user-name" placeholder="Enter name">
+                        <br>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id='email' name="user-email" placeholder="Enter email address">
+                        
+                        <label for="message" class='text-area-label'>Enter your message here:</label>
+                        <textarea id='message' name='user-message' placeholder="Enter your message! Anything really.. Ideally constructive.&#10;&#10;Have a great day!"></textarea>
+                        
+                        <button type="submit" class='form-button'>Submit</button>
+                    </form>
+                </div>
+            </section>
+         
+        </main>
+
+        
+        <footer>
+            <p>dan.co</p>
+        </footer> 
+
+    </body>
+</html>

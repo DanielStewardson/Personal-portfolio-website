@@ -6,7 +6,7 @@ body, html, li, ul, nav, div, header, img, input, span, h1, h2, h3, h4, h5, p {
 body {
     font-weight: normal;
     background-color: hsl(0, 0%, 3%);
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     color: rgb(235, 235, 235);
 }
 
@@ -147,12 +147,12 @@ a:hover {
     position: fixed;
     display: flex;
     align-items: center;
-    top: 100%;
+    top: 150%;
     height: 100vh;
     width: 100%;
     justify-content: center;
     background-color: hsl(0, 0%, 3%);
-    transition: top .8s ease;
+    transition: top .5s ease-out;
 }
 
 .slide-nav ul {
@@ -186,13 +186,21 @@ a:hover {
 
 .nav-button:checked ~ .slide-nav {
     top: 0;
-    transition: top .8s ease .4s;
+    transition: top .5s ease-out .3s;
 }
 
 .nav-button:checked ~ .slide-one {
     top: 0;
-    transition: top .8s ease;
+    transition: top .5s ease-out;
 }
+
+/*-----focus nav ---*/
+
+.slide-nav:focus-within {
+    top: 0;
+    transition: top .5s ease-out .3s;
+}
+
 
 .slide-one {
     z-index: -1;
@@ -201,7 +209,7 @@ a:hover {
     height: 100vh;
     width: 100%;
     background-color: darkorange;
-    transition: top .8s ease .4s;
+    transition: top .5s ease-out .3s;
 }
 
 /*------------------------------- Header ----------------------------------*/
@@ -217,8 +225,8 @@ header {
 
 .intro-text {
     position: relative;
-    top: 38%;
-    left: 8%;
+    top: 45%;
+    left: 3%;
     width: 40rem;
     font-family: 'Press Start 2P', cursive;
 }
@@ -241,7 +249,7 @@ header {
     bottom: 1rem;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 3rem;
+    width: 2rem;
 }
 
 /*------------------------------- Main ----------------------------------*/
@@ -266,7 +274,6 @@ header {
     height: 40rem;
     font-size: 1.6rem;
     font-family: 'Press Start 2P', cursive;
-    /* font-family: 'Monoton', cursive; */
 }
 
 .fill h2 {
@@ -280,3 +287,19 @@ header {
 
 /*------------------------------- About ----------------------------------*/
 
+
+
+
+/*------------------------------- Footer ----------------------------------*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+footer p {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}

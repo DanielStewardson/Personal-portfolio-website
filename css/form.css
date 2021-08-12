@@ -1,0 +1,45 @@
+/*------------------------------- Contact ----------------------------------*/
+
+.contact-form {
+    margin: 0 auto;
+    width: 800px;
+    font-size: 1.5rem;
+}
+
+.contact-form label {
+    margin: 3rem 0 1rem 0;
+    display: inline-block;
+}
+
+input {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.4rem;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 300px;
+    resize: none;
+    font-size: 1.4rem;
+}
+
+.form-button {
+    display: block;
+    margin: 2rem auto;
+    width: 16rem;
+    height: 4rem;
+    background-color: darkorange;
+    color: rgb(235, 235, 235);
+    border: darkorange 5px groove;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
+}
+
+.form-button:hover,
+.form-button:focus {
+    background-color: rgb(235, 235, 235);
+    color: darkorange;
+}
