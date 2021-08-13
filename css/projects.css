@@ -64,7 +64,7 @@
     border: dimgray 10px groove;
 }
 
-.tile-links {
+.tile-links {            
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -74,33 +74,25 @@
     background-color: hsla(0, 0%, 0%, .8);
 }
 
-.tile-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.tile-link {          /*addon to orange buttons*/
     width: 9.5rem;
     height: 3rem;
-    color: rgb(235, 235, 235);
-    border: darkorange 5px groove;
-    background-color: darkorange;
-}
-
-.tile-link:hover {
-    background-color: rgb(235, 235, 235);
 }
 
 /*------------------------------- Tile backgrounds ----------------------------------*/
 
 .tile-1 {
-
-    background-image: url(../resources/pictures/flex-site-pic.png);
+    background-image: url(../resources/pictures/nav-bar-pic.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .tile-2 {
-
+    background-image: url(../resources/pictures/flex-site-pic.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .tile-3 {
