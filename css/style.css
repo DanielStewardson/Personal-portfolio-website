@@ -76,7 +76,7 @@ a:hover {
 
 .top-nav a {
     margin: 0 2rem;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-family: 'Press Start 2P', cursive;
     color: rgb(235, 235, 235);
 }
@@ -96,8 +96,8 @@ a:hover {
 .nav-button-label span::after {
     display: block;
     background-color: rgb(235, 235, 235);
-    height: 3px;
-    width: 2.2rem;
+    height: 4px;
+    width: 2.6rem;
     position: relative;
     transition: .5s ease,
                 background-color 0s;
@@ -110,11 +110,11 @@ a:hover {
 }
 
 .nav-button-label span::before {
-    bottom: 12px;
+    bottom: 14px;
 }
 
 .nav-button-label span::after {
-    top: 12px;
+    top: 14px;
 }
 
 .nav-button-label span:hover,
@@ -128,6 +128,11 @@ a:hover {
     color: darkorange;
 }
 
+@media screen and (max-width: 1640px) {
+    .top-nav {
+        background-color: hsl(0, 0%, 3%);
+    }
+}
 /* -------------------------- Button spin ----------------------------- */
 
 .nav-button:checked ~ label span {
@@ -200,7 +205,7 @@ a:hover {
     transition: top .5s ease-out;
 }
 
-/*-----focus nav ---*/
+/*----- focus nav ---*/
 
 .slide-nav:focus-within {
     top: 0;
@@ -225,10 +230,15 @@ a:hover {
         font-size: 2rem;
         letter-spacing: .1rem;
     }
+    .slide-nav li a::before {
+        width: 15px;
+        height: 15px;
+        animation: blinker 1s step-start infinite;
+    }
     .slide-nav li a:hover::before,
     .slide-nav li a:focus::before {
     transform: scale(1.2);
-}
+    }
 }
 
 /*------------------------------- Orange navigation buttons ----------------------------------*/
@@ -241,12 +251,14 @@ a:hover {
     border: darkorange 5px groove;
     background-color: darkorange;
     font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px rgb(173, 95, 0);
 }
 
 .orange-button:hover,
 .orange-button:focus {
     background-color: rgb(235, 235, 235);
     color: darkorange;
+    transform: translate(.1rem, -.3rem);
 }
 
 /*------------------------------- Header ----------------------------------*/
@@ -265,12 +277,16 @@ header {
     top: 45%;
     left: 3%;
     max-width: 40rem;
-    font-family: 'Press Start 2P', cursive;
 }
 
 .first-letter {
     font-size: 3rem;
     font-weight: bold;
+    line-height: normal;
+}
+
+.name {
+    font-size: 2rem;
     line-height: normal;
 }
 
@@ -280,6 +296,10 @@ header {
     letter-spacing: .1rem;
     line-height: 1.2;
 } 
+
+strong {
+    font-size: 2rem;
+}
 
 .down-arrow {
     position: absolute;
@@ -303,12 +323,13 @@ img {
 
 .section {
     width: 100%;
+    overflow: hidden;
 }
 
 .wrap {
     margin: 0 auto;
-    padding: 0 1rem;
-    max-width: 1400px;
+    padding: 0 1rem 0 1rem;
+    max-width: 1100px;
 }
 
 .page-link {              /*addon to orange buttons*/
@@ -318,35 +339,122 @@ img {
     margin: 1rem 0;
 }
 
+.down-arrow-inflow {
+    width: 2rem;
+}
+
 /*------------------------------- Fill ----------------------------------*/
 
 .fill {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20rem 1rem;
+    padding: 30rem 1rem;
     font-size: 1.6rem;
-    font-family: 'Press Start 2P', cursive;
+    max-width: 800px;
 }
 
 .fill h2 {
     font-weight: normal;
-    color: rgb(235, 235, 235);
+}
+
+.first-fill-left {
+    margin: 2rem auto 2rem 12rem;
+}
+.first-fill-right {
+    margin: 2rem 12rem 2rem auto;
+}
+
+.second-fill-left {
+    margin: 2rem auto 2rem 0;
+}
+.second-fill-right {
+    margin: 2rem 0 2rem auto;
+}
+
+.third-fill-left {
+    display: inline-block;
+}
+.third-fill-right {
+    display: inline-block;
 }
 
 .fill span {
     color: rgb(255, 0, 149);
 }
 
-@media only screen and (max-width: 564px) {
+@media only screen and (max-width: 590px) {
+    .slide-in-left {
+        margin: 2rem 0 2rem auto;
+    }
+    .slide-in-right {
+        margin: 2rem 0 2rem auto;
+    }
     .fill h2 {
         text-align: right;
-        margin-left: auto;
+    }
+    .center-fill-text {
+        text-align: right;
     }
 }
 
 /*------------------------------- About Section ----------------------------------*/
 
+.about-image {
+    max-width: 20rem;
+    margin-top: auto;
+}
+
+.about-box {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.about-text {
+    line-height: 1.8rem;
+    font-size: .8rem;
+    padding: 5rem 1rem 1rem 1rem;
+    max-width: 70%;
+    margin-bottom: auto;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about-text p {
+    opacity: .9;
+}
+
+.tech-icon-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.html-icon {
+    width: 130px;
+}
+
+.mini-dan {
+    display: none;
+}
+
+@media  only screen and (max-width: 760px) {
+    .about-image {
+        display: none;
+    }
+    .about-text {
+        max-width: 90%;
+    }
+    .mini-dan {
+        display: block;
+    }
+}
 
 /*------------------------------- Project section ----------------------------------*/
 
@@ -356,12 +464,13 @@ img {
 
 .section-title h2 {
     margin-bottom: 4rem;
+    font-size: 2rem;
 }
 
-.git-links {
+.git-links {          /*add on orange buttons*/
     display: inline-flex;
-    width: 160px;
-    height: 50px;
+    width: 140px;
+    height: 40px;
     font-size: .9rem;
 }
 
@@ -371,45 +480,67 @@ img {
     justify-content: space-evenly;
     width: 100%;
 }
+.used-tech-box {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+    width: 100%;
+    opacity: .7;
+}
 
 .project-box {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    margin-top: 8rem;
+    width: 96%;
+    padding: 3rem 0rem;
+    margin: 8rem 0 0 0;
+    background-color: hsl(0, 0%, 8%);
+    border: 1rem groove hsl(0, 0%, 8%);
 }
 
 .project-text {
     max-width: 30rem;
     min-width: 10rem;
-    margin: 2rem 1rem 1rem 0;
+    margin: 2rem 1rem 1rem 1rem;
     line-height: 1.2rem;
     font-size: .8rem;
 }
 
 .project-text h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+}
+
+.project-box p {
+    opacity: .8;
 }
 
 .project-img {
-    max-width: 40rem;
-    min-width: 15rem;
+    max-width: 35rem;
+    min-width: 10rem;
     margin: 1rem;
-    border: darkorange 8px groove;
+    border: darkorange .8rem groove;
+}
+
+.project-img:hover {
+    transform: translateY(-.5rem);
 }
 
 .flex-center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8rem 0;
 }
 
-.end-button {
+.end-button {           /* orange button addon*/
     width: 350px;
     height: 100px;
     font-size: 1.5rem;
+    margin: 8rem 0;
+    border: 10px;
+    border: darkorange 10px groove;
 }
 
 @media only screen and (max-width: 900px) {
@@ -421,7 +552,6 @@ img {
     }
     .project-text {
         max-width: 90%;
-        /* text-align: center; */
     }
     .git-links {
         font-size: 1.2rem;

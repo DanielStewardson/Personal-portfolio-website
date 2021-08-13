@@ -1,3 +1,5 @@
+/* ------------------------------ Page transitions ---------------------*/
+
 .transition-1 {
     position: fixed;
     width: 100%;
@@ -6,7 +8,6 @@
     bottom: 0;
     z-index: 11;
     background-color: darkorange;
-    
 }
 
 .transition-1.is-active {
@@ -27,5 +28,26 @@
 
 .transition-2.is-active-2 {
     left: 0;
+}
 
+/* ------------------------------ Text slide transitions ---------------------*/
+
+.slide-in-left {
+    transform:translateX(-1200%);
+}
+
+.slide-in-right {
+    transform:translateX(1200%);
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.slide-in-left.active,
+.slide-in-right.active,
+.fade-in.active {
+    transform:translateX(0);
+    opacity: 1;
+    transition: .5s ease-out;
 }

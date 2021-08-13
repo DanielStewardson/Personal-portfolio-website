@@ -29,7 +29,7 @@
         <nav class='top-nav'>
             <div class='logo'><a href='index.html' alt='Home icon' class="slide">D.S.</a></div>
             
-            <input type='checkbox' class='nav-button' id='nav-button'>
+            <input type='checkbox' class='nav-button' id='nav-button' name="nav-butt">
             <label for='nav-button' class='nav-button-label'>
                 <span></span>
             </label>
@@ -49,8 +49,8 @@
         <header>
             <div class='wrap head-wrap'>
                 <article class='intro-text'>
-                    <h1><span class="first-letter">H</span>i, I'm Bob.<br>
-                    I make tractors and use umbrellas to fly around for a living<span class="blinker">.</span></h1>
+                    <h1><span class="first-letter">H</span>i, I'm <span class="name">Daniel</span>.<br><br>
+                    Aspiring web developer, dreamer & <br>hobby collector<span class="blinker">.</span></h1>
                 </article>
 
                 <img src='resources/icons/white-arrow.png' class='down-arrow blinker'>
@@ -60,35 +60,68 @@
         <main>
             <section class='section'>
                 <div class='wrap fill'>
-                    <h2>New <br><br>&emsp; <span>start.</span></h2>
+                    <h2 class="slide-in-left first-fill-left active">About</h2>
+                    <h2 class="slide-in-right first-fill-right active"><span>me.</span></h2>
                 </div>
             </section>
 
 
             <section class='about section'>
                 <div class='wrap'>
-                   
+                    <div class="about-box">
+                        <div class="about-text">
+                            <h2 class="fade-in active">Coffee and code<span class="blinker">.</span></h2>
+                            <p class="slide-in-right active">I started my dev journey in 2021.<br><br>
+                            I've spent years in jobs that paid the bills, but didn't quite fit.<br><br>
+                            Once I started learning to code, I found I got a real buzz out of creating something or making a problem work. Even if it 
+                            did cause some frustration on the way.<br><br>
+                            I now practice and learn new things every day and can't wait to join a team, get stuck in and get even better!</p>
+                            <div class="tech-icon-box active">
+                                <div class="html-icon slide-in-left">
+                                    <img src="resources\pictures\html-icon.png">
+                                </div>
+                                <div class="html-icon fade-in active">
+                                    <img src="resources/pictures/css3.png">
+                                </div>
+                                <div class="html-icon slide-in-right">
+                                    <img src="resources/pictures/js-icon.png">
+                                </div>
+                                <div class="html-icon mini-dan active">
+                                    <img src="resources\pictures\vectorstock_27894444-removebg-preview.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-image fade-in active">
+                            <img src="resources\pictures\vectorstock_27894444-removebg-preview.png">
+                        </div>
+                    </div>
                 </div>
             </section>
 
 
             <section class='section'>
                 <div class='wrap fill'>
-                    <h2>Practice <br><br>&emsp; &emsp; <span>makes perfect.</span></h2>
+                    <h2 class="slide-in-left second-fill-left active">Practice</h2>
+                    <h2 class="slide-in-right second-fill-right active"><span>makes perfect.</span></h2>
                 </div>
             </section>
 
 
             <section class='projects section'>
-                <article class='wrap'>
-                    <div class="section-title">
-                        <h2>Projects and work<span class="blinker">.</span></h2>
+                <article class='wrap flex-center'>
+                    <div class="section-title fade-in active">
+                        <h2>Projects & work<span class="blinker">.</span></h2>
                         
                         <p>A few examples of my work so far.</p>
                     </div>
-                    <div class='project-box'>
-                        <div class="project-img">
-                            <img src="resources\pictures\flex-site-pic.png">
+                    <div class='project-box slide-in-left active'>
+                        <div>
+                            <div class="project-img">
+                                <img src="resources\pictures\flex-site-pic.png">
+                            </div>
+                            <div class='used-tech-box'>
+                                <p>.html</p><p>CSS</p><p>JavaScript</p>
+                            </div>
                         </div>
                         <div class="project-text">
                             <h3>Company landing page<span class="blinker">.</span></h3>
@@ -101,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class='project-box project-box-2'>
+                    <div class='project-box project-box-2 slide-in-right active'>
                         <div class="project-text">
                             <h3>Reactive nav bar<span class="blinker">.</span></h3>
                             <br><br>
@@ -112,13 +145,23 @@
                                 <a href='https://github.com/DanielStewardson/Reactive-nav-bar' target='_blank' class='orange-button git-links'>GitHub</a>
                             </div>
                         </div>
-                        <div class="project-img">
-                            <img src="resources\pictures\nav-bar-pic.png">
+                        <div>
+                            <div class="project-img">
+                                <img src="resources\pictures\nav-bar-pic.png">
+                            </div>
+                            <div class='used-tech-box'>
+                                <p>.html</p><p>CSS</p><p>JavaScript</p>
+                            </div>
                         </div>
                     </div>
-                    <div class='project-box'>
-                        <div class="project-img">
-                            <img src="resources\pictures\fotomatic.png">
+                    <div class='project-box slide-in-left active'>
+                        <div>
+                            <div class="project-img">
+                                <img src="resources\pictures\fotomatic.png">
+                            </div>
+                            <div class='used-tech-box'>
+                                <p>.html</p><p>CSS</p>
+                            </div>
                         </div>
                         <div class="project-text">
                             <h3>Webpage fix<span class="blinker">.</span></h3>
@@ -135,13 +178,17 @@
                     <div class="flex-center">
                         <a href='html/projects.html' class='page-link slide orange-button end-button'>More projects!</a>
                     </div>
+                    <img src='resources/icons/white-arrow.png' class='down-arrow-inflow blinker'>
                 </article>
             </section>
 
 
             <section class='section'>
                 <div class='wrap fill'>
-                    <h2>Get in touch.</h2>
+                    <div class="center-fill-text">
+                        <h2 class="slide-in-left third-fill-left active">Get </h2>
+                        <h2 class="slide-in-right third-fill-right active"><span>in touch.</span></h2>
+                    </div>
                 </div>
             </section>
 

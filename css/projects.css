@@ -7,6 +7,10 @@
     line-height: 1.2;
 }
 
+.projects-intro h2 {
+    font-size: 1.9rem;
+}
+
 /* .carousel {  
     position: relative;
     height: 800px;
@@ -62,6 +66,9 @@
     margin: 1rem;
     background-color: rgb(32, 32, 32);
     border: dimgray 10px groove;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .tile-links {            
@@ -83,20 +90,14 @@
 
 .tile-1 {
     background-image: url(../resources/pictures/nav-bar-pic.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .tile-2 {
     background-image: url(../resources/pictures/flex-site-pic.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .tile-3 {
-
+    background-image: url(../resources/pictures/fotomatic.png);
 }
 
 .tile-4 {
