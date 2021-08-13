@@ -289,7 +289,11 @@ header {
     width: 2rem;
 }
 
-
+@media only screen and (max-width: 420px) {
+    .intro-text {
+        top: 35%;
+    }
+}
 
 /*------------------------------- Main ----------------------------------*/
 
