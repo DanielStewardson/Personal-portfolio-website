@@ -15,6 +15,12 @@ html {
     font-size: 1rem;
 }
 
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: .8rem;
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -201,15 +207,28 @@ a:hover {
     transition: top .5s ease-out .3s;
 }
 
-
 .slide-one {
     z-index: -1;
     position: fixed;
-    top: 100%;
+    top: 150%;
     height: 100vh;
     width: 100%;
     background-color: darkorange;
     transition: top .5s ease-out .3s;
+}
+
+@media only screen and (max-width: 900px) {
+    .slide-nav li {
+        padding: 2rem 0;
+    }
+    .slide-nav li a {
+        font-size: 2rem;
+        letter-spacing: .1rem;
+    }
+    .slide-nav li a:hover::before,
+    .slide-nav li a:focus::before {
+    transform: scale(1.2);
+}
 }
 
 /*------------------------------- Orange navigation buttons ----------------------------------*/
@@ -286,7 +305,6 @@ img {
     margin: 0 auto;
     padding: 0 1rem;
     max-width: 1400px;
-    /* min-width: 90%; */
 }
 
 .page-link {              /*addon to orange buttons*/
@@ -314,6 +332,13 @@ img {
 
 .fill span {
     color: rgb(255, 0, 149);
+}
+
+@media only screen and (max-width: 564px) {
+    .fill h2 {
+        text-align: right;
+        margin-left: auto;
+    }
 }
 
 /*------------------------------- About Section ----------------------------------*/
@@ -348,7 +373,7 @@ img {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 8rem;
 }
 
 .project-text {
@@ -367,9 +392,48 @@ img {
     max-width: 40rem;
     min-width: 15rem;
     margin: 1rem;
-    border: darkorange 7px groove;
+    border: darkorange 8px groove;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+}
+
+.end-button {
+    width: 350px;
+    height: 100px;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .project-box {
+        flex-direction: column;
+    }
+    .project-box-2 {
+        flex-direction: column-reverse;
+    }
+    .project-text {
+        max-width: 90%;
+        /* text-align: center; */
+    }
+    .git-links {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .git-links {
+        width: 120px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .end-button {
+        width: 95%;
+    }
+}
 /*------------------------------- Footer ----------------------------------*/
 
 footer {
@@ -384,25 +448,5 @@ footer p {
     left: 1.5rem;
 }
 
-/*------------------------------- Media queries ----------------------------------*/
 
 
-@media only screen and (max-width: 900px) {
-    .fill h2 {
-        text-align: right;
-    }
-    .project-box {
-        flex-direction: column;
-    }
-    .project-box-2 {
-        flex-direction: column-reverse;
-    }
-    .project-text {
-        max-width: 90%;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-
-}
