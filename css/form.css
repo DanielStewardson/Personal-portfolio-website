@@ -7,7 +7,7 @@
 }
 
 .contact-form label {
-    margin: 3rem 0 1rem 0;
+    margin: 48px 0 16px 0;
     display: inline-block;
 }
 
@@ -27,11 +27,11 @@ textarea {
 
 .form-button {           /*addon to orange buttons*/
     display: block;
-    margin: 3rem auto;
-    width: 16rem;
-    height: 4rem;
+    margin: 48px auto;
+    width: 256px;
+    height: 64px;
     font-size: 1.6rem;
-    letter-spacing: .2rem;
+    letter-spacing: 4px;
 }
 
 @media  screen and (max-width: 900px) {

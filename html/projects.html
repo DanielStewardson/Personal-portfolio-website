@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/transitions.css">
         <link rel="stylesheet" href="../css/projects.css">
+        <link rel="stylesheet" href="../css/retro-mode.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -23,116 +24,154 @@
         <script src="../js/tiles.js" async defer></script>
     </head>
 
-    <body class='index'>
+    <body class='projects'>
+        <div class="site-settings">
 
-        <div class="transition-1 is-active"></div>
-        <div class="transition-2 is-active-2"></div>
-       
-        <nav class='top-nav'>
-            <div class='logo'><a href='../index.html' class="slide">D.S.</a></div>
-            
-            <input type='checkbox' class='nav-button' id='nav-button'>
-            <label for='nav-button' class='nav-button-label'>
-                <span></span>
-            </label>
-
-            <div class='slide-one'></div>
-            
-            <nav class='slide-nav'>
-                <ul>
-                    <li><a href='../index.html' class="slide">Home</a></li>
-                    <li><a href='about.html' class="slide">About</a></li>
-                    <li><a href='projects.html' class="slide">Projects</a></li>
-                    <li><a href='contact.html' class="slide">Contact</a></li>
-                </ul>
-            </nav>
-        </nav>
-
-        <header>
-            <div class='wrap head-wrap'>
-                <article class='intro-text'>
-                    <h1><span class="first-letter">T</span>he scrapyard.<br><br>
-                    Here's some stuff I've bodged together so far<span class="blinker">.</span></h1>
-                </article>
-
-                <img src='../resources/icons/white-arrow.png' class='down-arrow blinker'>
-            </div>   
-        </header>
+            <div class="transition-1 is-active"></div>
+            <div class="transition-2 is-active-2"></div>
         
-        <main>
+            <nav class='top-nav'>
+                <div class='logo'><a href='../index.html' class="slide">D.S.</a></div>
+                
+                <input type='checkbox' class='nav-button' id='nav-button' name="nav-butt">
+                <label for='nav-button' class='nav-button-label'>
+                    <span></span>
+                </label>
+
+                <div class='slide-one'></div>
+                
+                <nav class='slide-nav'>
+                    <ul>
+                        <li><a href='../index.html' class="slide">Home</a></li>
+                        <li><a href='about.html' class="slide">About</a></li>
+                        <li><a href='projects.html' class="slide">Projects</a></li>
+                        <li><a href='contact.html' class="slide">Contact</a></li>
+                    </ul>
+                </nav>
+            </nav> 
+
+                                <!-- Fixed overlays, retro button etc -->
+            <div>
+                <div class='retro-mode-label' id="retro-mode-butt">             <!--Retro button-->
+                    <img src="../resources/icons/coin-button.png" class="coin-switch">
+                </div> 
+                <img src='../resources/pictures/not-a-fan.png' class='switch-bubble switch-bubble-1 active'>
+                <img src='../resources/pictures/love8bit.png' class='switch-bubble switch-bubble-2 active'>    
+
+                <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-1 github-icon">
+                    <img src="../resources/icons/github2.png">
+                </a>
+                <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-2 github-icon">
+                    <img src="../resources/icons/githubicon4.png">
+                </a>
+                <img src='../resources/pictures/gitHub-bubble-right.png' class='github-bubble'>
+            </div>
+
+            <header>
+                <div class='wrap head-wrap'>
+                    <article class='intro-text'>
+                        <h1><span class="first-letter">T</span>he scrapyard.<br>
+                        Here's some stuff I've bodged together so far<span class="blinker">.</span></h1>
+                    </article>
+
+                    <img src='../resources/icons/white-arrow.png' class='down-arrow blinker'>
+                </div>   
+            </header>
             
-            <section class='section'>
-                <div class='wrap fill'>
-                    <h2 class="slide-in-left second-fill-left active">Practice</h2>
-                    <h2 class="slide-in-right second-fill-right active"><span>makes perfect.</span></h2>
-                </div>
-            </section>
+            <main>
+                
+                <section class='section'>
+                    <div class='wrap fill'>
+                        <h2 class="slide-in-left second-fill-left active">Practice</h2>
+                        <h2 class="slide-in-right second-fill-right active"><span>makes perfect.</span></h2>
+                    </div>
+                </section>
 
-            <section class='section'>
-                <div class="wrap">
-                    <article class="projects-intro slide-in-right active">
-                        <h2>Projects</h2>
-                        <br><br>
-                        <p>Here's a sample of some things I have created or worked on.</p>
-                    </article> 
-                </div>
-            </section>
+                <section class='section'>
+                    <div class="wrap">
+                        <article class="projects-intro slide-in-right active">
+                            <h2>Projects</h2>
+                            <br><br>
+                            <p>Here's a sample of some things I have created or worked on.</p>
+                        </article> 
+                    </div>
+                </section>
 
-            <section class="section">
-                <div class="wrap">
-                    <div class="project-tiles">
+                <section class="section">
+                    <div class="wrap">
+                        <div class="project-tiles">
 
-                        <div class="project-tile tile-1">
-                            <div class="tile-links">
-                                <a href='https://danielstewardson.github.io/Reactive-nav-bar/' target='_blank' class='tile-link orange-button'>Live site</a>
-                                <a href='https://github.com/DanielStewardson/Reactive-nav-bar' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            <div class="project-tile tile-1">
+                                <div class="tile-links">
+                                    <a href='https://danielstewardson.github.io/Reactive-nav-bar/' target='_blank' class='tile-link orange-button'>Live site</a>
+                                    <a href='https://github.com/DanielStewardson/Reactive-nav-bar' target='_blank' class='tile-link orange-button'>GitHub</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="project-tile tile-2">
-                            <div class="tile-links">
-                                <a href='https://danielstewardson.github.io/Flex-landing-page/' target='_blank' class='tile-link orange-button'>Live site</a>
-                                <a href='https://github.com/DanielStewardson/Flex-landing-page' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            <div class="project-tile tile-2">
+                                <div class="tile-links">
+                                    <a href='https://danielstewardson.github.io/Flex-landing-page/' target='_blank' class='tile-link orange-button'>Live site</a>
+                                    <a href='https://github.com/DanielStewardson/Flex-landing-page' target='_blank' class='tile-link orange-button'>GitHub</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="project-tile tile-3">
-                            <div class="tile-links">
-                                <a href='https://danielstewardson.github.io/Fotomatic---Codecademy-fix-project/' target='_blank' class='orange-button git-links'>Live site</a>
-                                <a href='https://github.com/DanielStewardson/Fotomatic---Codecademy-fix-project' target='_blank' class='orange-button git-links'>GitHub</a>
+                            <div class="project-tile tile-3">
+                                <div class="tile-links">
+                                    <a href='https://danielstewardson.github.io/Fotomatic---Codecademy-fix-project/' target='_blank' class='orange-button git-links'>Live site</a>
+                                    <a href='https://github.com/DanielStewardson/Fotomatic---Codecademy-fix-project' target='_blank' class='orange-button git-links'>GitHub</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="project-tile tile-4">
-                            <div class="tile-links">
-                                <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
-                                <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            <div class="project-tile tile-4">
+                                <div class="tile-links">
+                                    <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
+                                    <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="project-tile tile-5">
-                            <div class="tile-links">
-                                <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
-                                <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            <div class="project-tile tile-5">
+                                <div class="tile-links">
+                                    <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
+                                    <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="project-tile tile-6">
-                            <div class="tile-links">
-                                <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
-                                <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            <div class="project-tile tile-6">
+                                <div class="tile-links">
+                                    <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
+                                    <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
+                    </div>
+                </section>
+            
+            </main>
+
+            <footer>
+                <div class='wrap footer'>
+                    <h4>Free resourses used</h4>
+                    <div class="resources">
+                        <div>
+                            <ul>
+                                <li><a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a></li>
+                                <li><a href="https://icons8.com/" target="_blank">icons8.com</a></li>
+                                <li><a href="https://www.remove.bg/upload" target="_blank">remove.bg</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="https://github.com/DanielStewardson" target="_blank">my GitHub</a></li>
+                                <li><a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a></li>
+                                <li><a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </section>
-         
-        </main>
+                <div class="dan-co">dan.co</div>  
+            </footer>
 
-        <footer>
-            <p>dan.co</p>
-        </footer>
-
+        </div>
     </body>
 </html>

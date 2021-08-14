@@ -7,7 +7,7 @@
     top: 0;
     bottom: 0;
     z-index: 11;
-    background-color: darkorange;
+    background-color: var(--retro-orange);;
 }
 
 .transition-1.is-active {
@@ -22,7 +22,7 @@
     top: 0;
     bottom: 0;
     z-index: 11;
-    background-color: darkorange;
+    background-color: var(--retro-orange);;
     transition: left .3s ease-out;
 }
 
@@ -45,9 +45,12 @@
 }
 
 .slide-in-left.active,
-.slide-in-right.active,
-.fade-in.active {
+.slide-in-right.active {
     transform:translateX(0);
-    opacity: 1;
     transition: .5s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transition: 1s ease-out;
 }

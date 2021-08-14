@@ -3,16 +3,39 @@ body, html, li, ul, nav, div, header, img, input, span, h1, h2, h3, h4, h5, p {
     padding: 0;
  }
 
-body {
-    font-weight: normal;
-    background-color: hsl(0, 0%, 3%);
-    font-family: 'Press Start 2P', cursive;
-    color: rgb(235, 235, 235);
+html[theme=retro] {
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
-html {
-    box-sizing: border-box;
-    font-size: 1rem;
+:root {
+    --retro-orange: darkorange;
+    --button-border: rgb(212, 117, 0);
+    --button-text: rgb(235, 235, 235);
+    --button-text-shadow: rgb(173, 95, 0);
+    --retro-pink: rgb(255, 0, 149);
+    --retro-white: rgb(235, 235, 235);
+    --off-black-background: hsl(0, 0%, 6%);
+    --black-accent: hsl(0, 0%, 12%);
+    --black-borders: hsl(0, 0%, 20%);
+}
+
+/* :root {
+    --retro-orange: rgb(0, 187, 201);
+    --button-border: rgb(0, 155, 167);
+    --button-text: rgb(235, 235, 235);
+    --button-text-shadow: rgb(0, 124, 133);
+    --retro-pink: rgb(255, 0, 149);
+    --retro-white: rgb(43, 43, 43);
+    --off-black-background: hsl(0, 0%, 83%);
+    --black-accent: hsl(203, 14%, 60%);
+    --black-borders: rgb(0, 124, 133);
+} */
+
+.site-settings[theme=retro] {
+    background-color: var(--off-black-background);
+    font-family: 'Press Start 2P', cursive;
+    color: var(--retro-white);
 }
 
 @media only screen and (max-width: 900px) {
@@ -21,12 +44,13 @@ html {
     }
 }
 
-a {
+a[theme=retro] {
     text-decoration: none;
+    color: var(--retro-white);
 }
 
 a:hover {
-    color: darkorange;
+    color: var(--retro-orange);
 }
 
 @keyframes blinker {
@@ -48,12 +72,12 @@ a:hover {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: hsl(0, 0%, 3%); 
+    background: var(--off-black-background); 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: darkorange; 
+    background: var(--retro-orange); 
     border-radius: 25px;
   }
   
@@ -61,6 +85,39 @@ a:hover {
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(41, 95%, 63%); 
   }
+
+/*------------------------------ Fixed overlay stuff ----------------------------------*/
+
+.github-icon-1[theme=retro] {
+    position: fixed;
+    z-index: 10;
+    bottom: 40px;
+    right: 40px;
+    width: 45px;
+}
+
+.github-icon-2[theme=retro] {
+    display: none;
+}
+
+.github-bubble {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 70px;
+    right: 20px;
+    width: 260px;
+}
+
+.github-icon:hover,
+.github-icon:focus {
+    transform: translateY(-6px);
+}
+
+.github-icon:hover ~ .github-bubble,
+.github-icon:focus ~ .github-bubble{
+    display: block;
+}
 
 /*------------------------------ Nav bar ----------------------------------*/
 
@@ -70,15 +127,15 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 3.5rem;
+    height: 60px;
     z-index: 10;
 }
 
 .top-nav a {
-    margin: 0 2rem;
+    margin: 0 35px;
     font-size: 1.8rem;
-    font-family: 'Press Start 2P', cursive;
-    color: rgb(235, 235, 235);
+    text-decoration: none;
+    color: var(--retro-white);
 }
 
 .nav-button {
@@ -86,7 +143,7 @@ a:hover {
 }
 
 .nav-button-label {
-    margin-right: 2rem;
+    margin-right: 35px;
     cursor: pointer;
     padding: 1rem 0;
 }
@@ -95,9 +152,9 @@ a:hover {
 .nav-button-label span::before,
 .nav-button-label span::after {
     display: block;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--retro-white);
     height: 4px;
-    width: 2.6rem;
+    width: 42px;
     position: relative;
     transition: .5s ease,
                 background-color 0s;
@@ -120,17 +177,21 @@ a:hover {
 .nav-button-label span:hover,
 .nav-button-label span:hover::before,
 .nav-button-label span:hover::after {
-    background-color: darkorange;
+    background-color: var(--retro-orange);;
 }
 
 .top-nav a:hover,
 .top-nav a:focus {
-    color: darkorange;
+    color: var(--retro-orange);;
 }
 
 @media screen and (max-width: 1640px) {
     .top-nav {
-        background-color: hsl(0, 0%, 3%);
+        background-color: var(--off-black-background);
+        height: 56px;
+    }
+    .github-icon {
+        width: 30px;
     }
 }
 /* -------------------------- Button spin ----------------------------- */
@@ -162,7 +223,7 @@ a:hover {
     height: 100vh;
     width: 100%;
     justify-content: center;
-    background-color: hsl(0, 0%, 3%);
+    background-color: var(--off-black-background); 
     transition: top .5s ease-out;
 }
 
@@ -171,7 +232,7 @@ a:hover {
 }
 
 .slide-nav li {
-    padding: 4rem 0;
+    padding: 64px 0;
 }
 
 .slide-nav li a {
@@ -185,7 +246,7 @@ a:hover {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: darkorange;
+    background-color: var(--retro-orange);;
 }
 
 .slide-nav li a:hover::before,
@@ -218,13 +279,13 @@ a:hover {
     top: 150%;
     height: 100vh;
     width: 100%;
-    background-color: darkorange;
+    background-color: var(--retro-orange);;
     transition: top .5s ease-out .3s;
 }
 
 @media only screen and (max-width: 900px) {
     .slide-nav li {
-        padding: 2rem 0;
+        padding: 32px 0;
     }
     .slide-nav li a {
         font-size: 2rem;
@@ -247,18 +308,19 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(235, 235, 235);
-    border: darkorange 5px groove;
-    background-color: darkorange;
-    font-family: 'Press Start 2P', cursive;
-    text-shadow: 2px 2px rgb(173, 95, 0);
+    text-decoration: none;
+    color: var(--button-text);
+    border: var(--button-border) 5px groove;
+    background-color: var(--retro-orange);;
+    text-shadow: 2px 2px var(--button-text-shadow);
+    box-shadow: rgb(0, 0, 0) 0px 20px 20px -10px;
 }
 
 .orange-button:hover,
 .orange-button:focus {
-    background-color: rgb(235, 235, 235);
-    color: darkorange;
-    transform: translate(.1rem, -.3rem);
+    background-color: var(--retro-white);
+    color: var(--retro-orange);;
+    transform: translate(2px, -3px);
 }
 
 /*------------------------------- Header ----------------------------------*/
@@ -276,25 +338,23 @@ header {
     position: relative;
     top: 45%;
     left: 3%;
-    max-width: 40rem;
+    max-width: 640px;
 }
 
 .first-letter {
     font-size: 3rem;
     font-weight: bold;
-    line-height: normal;
 }
 
 .name {
     font-size: 2rem;
-    line-height: normal;
 }
 
 .intro-text h1 {
     font-weight: lighter;
     font-size: 1.6rem;
-    letter-spacing: .1rem;
-    line-height: 1.2;
+    letter-spacing: 2px;
+    line-height: 50px;
 } 
 
 strong {
@@ -303,10 +363,10 @@ strong {
 
 .down-arrow {
     position: absolute;
-    bottom: 1rem;
+    bottom: 16px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 2rem;
+    width: 32px;
 }
 
 @media only screen and (max-width: 420px) {
@@ -328,19 +388,19 @@ img {
 
 .wrap {
     margin: 0 auto;
-    padding: 0 1rem 0 1rem;
+    padding: 0 16px 0 16px;
     max-width: 1100px;
 }
 
 .page-link {              /*addon to orange buttons*/
     display: inline-flex;
-    width: 9.5rem;
-    height: 2rem;
-    margin: 1rem 0;
+    width: 152px;
+    height: 32px;
+    margin: 16px 0;
 }
 
 .down-arrow-inflow {
-    width: 2rem;
+    width: 32px;
 }
 
 /*------------------------------- Fill ----------------------------------*/
@@ -350,7 +410,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30rem 1rem;
+    padding: 480px 16px;
     font-size: 1.6rem;
     max-width: 800px;
 }
@@ -360,17 +420,17 @@ img {
 }
 
 .first-fill-left {
-    margin: 2rem auto 2rem 12rem;
+    margin: 32px auto 32px 12rem;
 }
 .first-fill-right {
-    margin: 2rem 12rem 2rem auto;
+    margin: 32px 12rem 32px auto;
 }
 
 .second-fill-left {
-    margin: 2rem auto 2rem 0;
+    margin: 32px auto 32px 0;
 }
 .second-fill-right {
-    margin: 2rem 0 2rem auto;
+    margin: 32px 0 32px auto;
 }
 
 .third-fill-left {
@@ -381,15 +441,15 @@ img {
 }
 
 .fill span {
-    color: rgb(255, 0, 149);
+    color: var(--retro-pink);
 }
 
 @media only screen and (max-width: 590px) {
     .slide-in-left {
-        margin: 2rem 0 2rem auto;
+        margin: 32px 0 32px auto;
     }
     .slide-in-right {
-        margin: 2rem 0 2rem auto;
+        margin: 32px 0 32px auto;
     }
     .fill h2 {
         text-align: right;
@@ -402,7 +462,7 @@ img {
 /*------------------------------- About Section ----------------------------------*/
 
 .about-image {
-    max-width: 20rem;
+    max-width: 320px;
     margin-top: auto;
 }
 
@@ -413,16 +473,16 @@ img {
 }
 
 .about-text {
-    line-height: 1.8rem;
+    line-height: 29px;
     font-size: .8rem;
-    padding: 5rem 1rem 1rem 1rem;
+    padding: 80px 16px 16px 16px;
     max-width: 70%;
     margin-bottom: auto;
 }
 
 .about-text h2 {
     font-size: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 64px;
 }
 
 .about-text p {
@@ -433,7 +493,7 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 .html-icon {
@@ -463,7 +523,7 @@ img {
 }
 
 .section-title h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 64px;
     font-size: 2rem;
 }
 
@@ -476,13 +536,13 @@ img {
 
 .git-box {
     display: flex;
-    padding-top: 3rem;
+    padding-top: 48px;
     justify-content: space-evenly;
     width: 100%;
 }
 .used-tech-box {
     display: flex;
-    padding-top: 1rem;
+    padding-top: 16px;
     justify-content: space-evenly;
     width: 100%;
     opacity: .7;
@@ -493,17 +553,25 @@ img {
     justify-content: space-evenly;
     align-items: center;
     width: 96%;
-    padding: 3rem 0rem;
+    padding: 48px 0rem;
     margin: 8rem 0 0 0;
-    background-color: hsl(0, 0%, 8%);
-    border: 1rem groove hsl(0, 0%, 8%);
+    background-color: var(--black-accent);
+    border: 16px groove var(--black-borders);
+}
+
+.project-box-left {
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.project-box-right {
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 .project-text {
-    max-width: 30rem;
-    min-width: 10rem;
-    margin: 2rem 1rem 1rem 1rem;
-    line-height: 1.2rem;
+    max-width: 480px;
+    min-width: 160px;
+    margin: 32px 16px 16px 16px;
+    line-height: 20px;
     font-size: .8rem;
 }
 
@@ -517,14 +585,15 @@ img {
 }
 
 .project-img {
-    max-width: 35rem;
-    min-width: 10rem;
+    max-width: 560px;
+    min-width: 160px;
     margin: 1rem;
-    border: darkorange .8rem groove;
+    border: var(--retro-pink) 4px double;
+    box-shadow: rgb(0, 0, 0) 0px 20px 20px -5px;
 }
 
 .project-img:hover {
-    transform: translateY(-.5rem);
+    transform: translateY(-8px);
 }
 
 .flex-center {
@@ -538,17 +607,24 @@ img {
     width: 350px;
     height: 100px;
     font-size: 1.5rem;
-    margin: 8rem 0;
+    margin: 128px 0;
     border: 10px;
-    border: darkorange 10px groove;
+    border: var(--button-border) 10px groove;
 }
 
 @media only screen and (max-width: 900px) {
     .project-box {
         flex-direction: column;
     }
-    .project-box-2 {
+    .project-box-right {
         flex-direction: column-reverse;
+    }
+    .project-box-left {
+        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;    
+    }
+    
+    .project-box-right {
+        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;    
     }
     .project-text {
         max-width: 90%;
@@ -572,14 +648,56 @@ img {
 
 footer {
     position: relative;
+    padding: 140px 0 140px 0;
     width: 100%;
-    height: 40vh;
+    border-top: double 6px var(--black-accent);
 }
 
-footer p {
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resources {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer h4 {
+    font-size: 1.3rem;
+    padding-bottom: 80px;
+    letter-spacing: 5px;
+    color: rgb(131, 131, 131);
+}
+
+.resources ul {
+    list-style: none;
+}
+
+.resources li {
+    line-height: 60px;
+    text-align: center;
+}
+
+.resources li a {
+    text-decoration: none;
+    font-size: .9rem;
+    color: rgb(131, 131, 131);
+}
+
+.resources li a:hover {
+    text-decoration: underline
+}
+
+.dan-co {
     position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
