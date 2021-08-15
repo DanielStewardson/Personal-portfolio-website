@@ -7,7 +7,7 @@
     top: 0;
     bottom: 0;
     z-index: 11;
-    background-color: var(--retro-orange);;
+    background-color: var(--main-pop-color);;
 }
 
 .transition-1.is-active {
@@ -22,7 +22,7 @@
     top: 0;
     bottom: 0;
     z-index: 11;
-    background-color: var(--retro-orange);;
+    background-color: var(--main-pop-color);;
     transition: left .3s ease-out;
 }
 

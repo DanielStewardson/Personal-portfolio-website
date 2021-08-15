@@ -1,50 +1,16 @@
 /*------------------------------- Projects ----------------------------------*/
-
+/* 
 .projects-intro {
     width: 80%;
     margin: 0 auto;
     padding: 10px 0;
     font-size: 1.2rem;
     line-height: 20px;
-}
+} */
 
 .projects-intro h2 {
     font-size: 1.9rem;
 }
-
-/* .carousel {  
-    position: relative;
-    height: 800px;
-    width: 80%;
-    margin: 5rem auto;
-    background-color: darkslateblue;
-}
-
-.carousel-track-container {
-    background-color: darkseagreen;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.carousel-track {
-    margin: 0;
-    padding: 0;
-}
-
-.carousel-button {
-    position:absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-button-left {
-    left: -6rem;
-}
-
-.carousel-button-right {
-    right: -6rem;
-} */
 
 .project-tiles {
     display: flex;
@@ -65,8 +31,8 @@
     width: 350px;
     height: 450px;
     margin: 16px;
-    background-color: var(--black-accent);
-    border: var(--black-borders) 10px groove;
+    background-color: var(--background-accent);
+    border: var(--background-accent-borders) 10px groove;
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,8 +45,8 @@
     width: 100%;
     height: 70px;
     padding: 8px 0;
-    background-color: var(--black-accent);
-    border-top: var(--retro-pink) 6px groove;
+    background-color: var(--background-accent);
+    border-top: var(--accent-pop-color) 6px groove;
 }
 
 .tile-link {          /*addon to orange buttons*/

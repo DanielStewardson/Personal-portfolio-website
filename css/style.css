@@ -3,54 +3,66 @@ body, html, li, ul, nav, div, header, img, input, span, h1, h2, h3, h4, h5, p {
     padding: 0;
  }
 
-html[theme=retro] {
+html {
     box-sizing: border-box;
-    font-size: 16px;
-}
-
-:root {
-    --retro-orange: darkorange;
-    --button-border: rgb(212, 117, 0);
-    --button-text: rgb(235, 235, 235);
-    --button-text-shadow: rgb(173, 95, 0);
-    --retro-pink: rgb(255, 0, 149);
-    --retro-white: rgb(235, 235, 235);
-    --off-black-background: hsl(0, 0%, 6%);
-    --black-accent: hsl(0, 0%, 12%);
-    --black-borders: hsl(0, 0%, 20%);
-}
-
-/* :root {
-    --retro-orange: rgb(0, 187, 201);
-    --button-border: rgb(0, 155, 167);
-    --button-text: rgb(235, 235, 235);
-    --button-text-shadow: rgb(0, 124, 133);
-    --retro-pink: rgb(255, 0, 149);
-    --retro-white: rgb(43, 43, 43);
-    --off-black-background: hsl(0, 0%, 83%);
-    --black-accent: hsl(203, 14%, 60%);
-    --black-borders: rgb(0, 124, 133);
-} */
-
-.site-settings[theme=retro] {
-    background-color: var(--off-black-background);
-    font-family: 'Press Start 2P', cursive;
-    color: var(--retro-white);
+    font-size: var(--font-size);
 }
 
 @media only screen and (max-width: 900px) {
     html {
-        font-size: .8rem;
+        font-size: var(--font-size-media);
     }
+}
+
+/* hsl(325, 100%, 50%); pink pop */
+
+:root[theme=retro] {
+    --font-size: 16px;
+    --font-size-media: 13px;
+    --main-pop-color: hsl(33, 100%, 50%);
+    --accent-pop-color: hsl(33, 100%, 50%);
+    --main-text-and-accent-color: hsl(0, 0%, 92%);
+    --button-border: hsl(33, 100%, 42%);
+    --button-text: hsl(0, 0%, 92%);
+    --button-text-shadow: hsl(33, 100%, 34%);
+    --button-hover-color: hsl(0, 0%, 92%);
+    --background-color: hsl(0, 0%, 6%);
+    --backgroundd-accent: hsl(0, 0%, 12%);
+    --background-accent-borders: hsl(0, 0%, 20%);
+    --main-font: 'Press Start 2P', cursive;
+    --retro-box-shadow-left: hsla(33, 100%, 50%, 0.4) -.31rem .31rem, hsla(33, 100%, 50%, 0.3) -.62rem .62rem, hsla(33, 100%, 50%, 0.2) -.94rem .94rem, hsla(33, 100%, 50%, 0.1) -1.25rem 1.25rem, hsla(33, 100%, 50%, 0.05) -1.56rem 1.56rem;
+    --retro-box-shadow-right: hsla(33, 100%, 50%, 0.4) .31rem .31rem, hsla(33, 100%, 50%, 0.3) .62rem .62rem, hsla(33, 100%, 50%, 0.2) .94rem .94rem, hsla(33, 100%, 50%, 0.1) 1.25rem 1.25rem, hsla(33, 100%, 50%, 0.05) 1.56rem 1.56rem;
+}
+
+:root[theme=boring] {
+    --font-size: 25px;
+    --font-size-media: 20px;
+    --main-pop-color: hsl(325, 100%, 50%, .6);
+    --accent-pop-color: hsl(32, 100%, 43%);
+    --main-text-and-accent-color: hsl(0, 0%, 17%);
+    --button-border: hsl(325, 100%, 50%, .6);
+    --button-text: hsl(0, 0%, 92%);
+    --button-text-shadow: hsl(197, 100%, 23%);
+    --button-hover-color: hsla(197, 65%, 40%, .2);
+    --background-color: hsl(0, 0%, 86%);
+    --backgroundd-accent: hsla(197, 65%, 40%, 0.281);
+    --background-accent-borders: hsla(197, 65%, 40%, 0.281);
+    --main-font: 'Quicksand', sans-serif;
+}
+
+.site-settings {
+    background-color: var(--background-color);
+    font-family: var(--main-font);
+    color: var(--main-text-and-accent-color);
 }
 
 a[theme=retro] {
     text-decoration: none;
-    color: var(--retro-white);
+    color: var(--main-text-and-accent-color);
 }
 
 a:hover {
-    color: var(--retro-orange);
+    color: var(--main-pop-color);
 }
 
 @keyframes blinker {
@@ -72,18 +84,18 @@ a:hover {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--off-black-background); 
+    background: var(--background-color); 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--retro-orange); 
+    background: var(--main-pop-color); 
     border-radius: 25px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(41, 95%, 63%); 
+    background: hsl(0, 0%, 24%); 
   }
 
 /*------------------------------ Fixed overlay stuff ----------------------------------*/
@@ -127,15 +139,15 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 60px;
+    padding: .8rem;
     z-index: 10;
 }
 
 .top-nav a {
-    margin: 0 35px;
+    margin-left: .5rem;
     font-size: 1.8rem;
     text-decoration: none;
-    color: var(--retro-white);
+    color: var(--main-text-and-accent-color);
 }
 
 .nav-button {
@@ -143,18 +155,18 @@ a:hover {
 }
 
 .nav-button-label {
-    margin-right: 35px;
+    padding: .6rem 0;
+    margin-right: 2.5rem;
     cursor: pointer;
-    padding: 1rem 0;
 }
 
 .nav-button-label span,
 .nav-button-label span::before,
 .nav-button-label span::after {
     display: block;
-    background-color: var(--retro-white);
-    height: 4px;
-    width: 42px;
+    background-color: var(--main-text-and-accent-color);
+    height: .25rem;
+    width: 2.8rem;
     position: relative;
     transition: .5s ease,
                 background-color 0s;
@@ -167,33 +179,33 @@ a:hover {
 }
 
 .nav-button-label span::before {
-    bottom: 14px;
+    bottom: .85rem;
 }
 
 .nav-button-label span::after {
-    top: 14px;
+    top: .85rem;
 }
 
 .nav-button-label span:hover,
 .nav-button-label span:hover::before,
 .nav-button-label span:hover::after {
-    background-color: var(--retro-orange);;
+    background-color: var(--main-pop-color);;
 }
 
 .top-nav a:hover,
 .top-nav a:focus {
-    color: var(--retro-orange);;
+    color: var(--main-pop-color);;
 }
 
 @media screen and (max-width: 1640px) {
     .top-nav {
-        background-color: var(--off-black-background);
-        height: 56px;
+        background-color: var(--background-color);
     }
     .github-icon {
         width: 30px;
     }
 }
+
 /* -------------------------- Button spin ----------------------------- */
 
 .nav-button:checked ~ label span {
@@ -220,10 +232,12 @@ a:hover {
     display: flex;
     align-items: center;
     top: 150%;
+    left: 0;
+    right: 0;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
-    background-color: var(--off-black-background); 
+    background-color: var(--background-color); 
     transition: top .5s ease-out;
 }
 
@@ -232,21 +246,22 @@ a:hover {
 }
 
 .slide-nav li {
-    padding: 64px 0;
+    padding: 2.4rem 0;
 }
 
 .slide-nav li a {
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: .2rem;
 }
 
 .slide-nav li a::before {
     content: "";
     display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--retro-orange);;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    left: -2rem;
+    background-color: var(--main-pop-color);;
 }
 
 .slide-nav li a:hover::before,
@@ -277,32 +292,31 @@ a:hover {
     z-index: -1;
     position: fixed;
     top: 150%;
+    left: 0;
+    right: 0;
     height: 100vh;
-    width: 100%;
-    background-color: var(--retro-orange);;
+    width: 100vw;
+    background-color: var(--main-pop-color);;
     transition: top .5s ease-out .3s;
 }
 
 @media only screen and (max-width: 900px) {
-    .slide-nav li {
-        padding: 32px 0;
-    }
-    .slide-nav li a {
-        font-size: 2rem;
-        letter-spacing: .1rem;
-    }
     .slide-nav li a::before {
-        width: 15px;
-        height: 15px;
         animation: blinker 1s step-start infinite;
     }
     .slide-nav li a:hover::before,
     .slide-nav li a:focus::before {
     transform: scale(1.2);
     }
+    .slide-nav li a {
+        font-size: 2rem;
+    }
+    .slide-nav li {
+        padding: 2rem 0;
+    }
 }
 
-/*------------------------------- Orange navigation buttons ----------------------------------*/
+/*------------------------------- Big navigation buttons ----------------------------------*/
 
 .orange-button {
     display: flex;
@@ -310,16 +324,16 @@ a:hover {
     align-items: center;
     text-decoration: none;
     color: var(--button-text);
-    border: var(--button-border) 5px groove;
-    background-color: var(--retro-orange);;
+    border: var(--button-border) .4rem groove;
+    background-color: var(--main-pop-color);;
     text-shadow: 2px 2px var(--button-text-shadow);
     box-shadow: rgb(0, 0, 0) 0px 20px 20px -10px;
 }
 
 .orange-button:hover,
 .orange-button:focus {
-    background-color: var(--retro-white);
-    color: var(--retro-orange);;
+    background-color: var(--button-hover-color);
+    color: var(--main-pop-color);
     transform: translate(2px, -3px);
 }
 
@@ -353,8 +367,8 @@ header {
 .intro-text h1 {
     font-weight: lighter;
     font-size: 1.6rem;
-    letter-spacing: 2px;
-    line-height: 50px;
+    letter-spacing: .1rem;
+    line-height: 3rem;
 } 
 
 strong {
@@ -363,10 +377,10 @@ strong {
 
 .down-arrow {
     position: absolute;
-    bottom: 16px;
+    bottom: 1rem;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 32px;
+    width: 2rem;
 }
 
 @media only screen and (max-width: 420px) {
@@ -388,19 +402,19 @@ img {
 
 .wrap {
     margin: 0 auto;
-    padding: 0 16px 0 16px;
     max-width: 1100px;
+    width: 90%;
 }
 
 .page-link {              /*addon to orange buttons*/
     display: inline-flex;
-    width: 152px;
-    height: 32px;
-    margin: 16px 0;
+    width: 9.5rem;
+    height: 2rem;
+    margin: 1rem 0;
 }
 
 .down-arrow-inflow {
-    width: 32px;
+    width: 2rem;
 }
 
 /*------------------------------- Fill ----------------------------------*/
@@ -420,17 +434,17 @@ img {
 }
 
 .first-fill-left {
-    margin: 32px auto 32px 12rem;
+    margin: 1.5rem auto 1.5rem 12rem;
 }
 .first-fill-right {
-    margin: 32px 12rem 32px auto;
+    margin: 1.5rem 12rem 1.5rem auto;
 }
 
 .second-fill-left {
-    margin: 32px auto 32px 0;
+    margin: 1.5rem auto 1.5rem 0;
 }
 .second-fill-right {
-    margin: 32px 0 32px auto;
+    margin: 1.5rem 0 1.5rem auto;
 }
 
 .third-fill-left {
@@ -441,15 +455,15 @@ img {
 }
 
 .fill span {
-    color: var(--retro-pink);
+    color: var(--accent-pop-color);
 }
 
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 600px) {
     .slide-in-left {
-        margin: 32px 0 32px auto;
+        margin: 1.5rem 0 1.5rem auto;
     }
     .slide-in-right {
-        margin: 32px 0 32px auto;
+        margin: 1.5rem 0 1.5rem auto;
     }
     .fill h2 {
         text-align: right;
@@ -462,27 +476,28 @@ img {
 /*------------------------------- About Section ----------------------------------*/
 
 .about-image {
-    max-width: 320px;
+    max-width: 300px;
     margin-top: auto;
 }
 
 .about-box {
+    margin: 0 auto;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+    max-width: 1000px;
 }
 
 .about-text {
-    line-height: 29px;
+    line-height: 1.8rem;
     font-size: .8rem;
-    padding: 80px 16px 16px 16px;
-    max-width: 70%;
-    margin-bottom: auto;
+    padding: 5rem 1rem 1rem 1rem;
+    width: 80%;
 }
 
 .about-text h2 {
     font-size: 2rem;
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
 }
 
 .about-text p {
@@ -493,11 +508,11 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 3rem;
 }
 
-.html-icon {
-    width: 130px;
+.known-tech-icon {
+    width: 7rem;
 }
 
 .mini-dan {
@@ -509,7 +524,7 @@ img {
         display: none;
     }
     .about-text {
-        max-width: 90%;
+        width: 100%;
     }
     .mini-dan {
         display: block;
@@ -518,84 +533,6 @@ img {
 
 /*------------------------------- Project section ----------------------------------*/
 
-.section-title {
-    text-align: center;
-}
-
-.section-title h2 {
-    margin-bottom: 64px;
-    font-size: 2rem;
-}
-
-.git-links {          /*add on orange buttons*/
-    display: inline-flex;
-    width: 140px;
-    height: 40px;
-    font-size: .9rem;
-}
-
-.git-box {
-    display: flex;
-    padding-top: 48px;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.used-tech-box {
-    display: flex;
-    padding-top: 16px;
-    justify-content: space-evenly;
-    width: 100%;
-    opacity: .7;
-}
-
-.project-box {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 96%;
-    padding: 48px 0rem;
-    margin: 8rem 0 0 0;
-    background-color: var(--black-accent);
-    border: 16px groove var(--black-borders);
-}
-
-.project-box-left {
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
-}
-
-.project-box-right {
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-}
-
-.project-text {
-    max-width: 480px;
-    min-width: 160px;
-    margin: 32px 16px 16px 16px;
-    line-height: 20px;
-    font-size: .8rem;
-}
-
-.project-text h3 {
-    font-size: 1.4rem;
-    letter-spacing: .1rem;
-}
-
-.project-box p {
-    opacity: .8;
-}
-
-.project-img {
-    max-width: 560px;
-    min-width: 160px;
-    margin: 1rem;
-    border: var(--retro-pink) 4px double;
-    box-shadow: rgb(0, 0, 0) 0px 20px 20px -5px;
-}
-
-.project-img:hover {
-    transform: translateY(-8px);
-}
-
 .flex-center {
     display: flex;
     flex-direction: column;
@@ -603,94 +540,177 @@ img {
     align-items: center;
 }
 
-.end-button {           /* orange button addon*/
-    width: 350px;
-    height: 100px;
-    font-size: 1.5rem;
-    margin: 128px 0;
-    border: 10px;
-    border: var(--button-border) 10px groove;
+.project-outer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
-@media only screen and (max-width: 900px) {
+.project-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.project-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    max-width: 450px;
+    padding: .2rem 0rem;
+    margin-top: 15rem;
+    background-color: var(--backgroundd-accent);
+    border: 1rem groove var(--background-accent-borders);
+}
+
+.project-box-left {
+    box-shadow: var(--retro-box-shadow-left);
+    margin-right: auto;
+}
+
+.project-box-right {
+    box-shadow: var(--retro-box-shadow-right);
+    margin-left: auto;
+}
+
+.section-title h2 {
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 350px;
+    height: 21rem;
+    margin: 1rem 1rem 1rem 1rem;
+    line-height: 1.2rem;
+    font-size: .7rem;
+}
+
+.project-text h3 {
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    line-height: 2rem;
+}
+
+.project-img {
+    position: relative;
+    max-width: 560px;
+    margin: 1rem;
+    border: var(--accent-pop-color) 4px double;
+    box-shadow: rgb(0, 0, 0) 0px 20px 20px -5px;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    transition: .4s ease;
+}
+.image-overlay img {
+    width: 20%;
+}
+
+.project-img:hover {
+    transform: translateY(-8px);
+}
+
+.project-img:hover .used-tech-box {
+    bottom: -100%;
+    opacity: 0;
+}
+
+.project-img:hover .image-overlay { 
+    top: -100%;
+    opacity: 0;
+}
+
+.git-links {          /*add on orange buttons*/
+    display: inline-flex;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: .8rem;
+}
+
+.git-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.used-tech-box {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: .6rem 0;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: .8rem;
+    transition: .5s ease;
+}
+
+.end-button {           /* orange button addon*/
+    width: 21.8rem;
+    height: 6.25rem;
+    font-size: 1.5rem;
+    margin: 8rem 0;
+    border: var(--button-border) .8rem groove;
+}
+
+@media only screen and (max-width: 1080px) {
+    .project-outer-wrapper {
+        justify-content: center;
+    }
     .project-box {
-        flex-direction: column;
-    }
-    .project-box-right {
-        flex-direction: column-reverse;
-    }
-    .project-box-left {
-        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;    
-    }
-    
-    .project-box-right {
-        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;    
+        width: 90%;
+        margin-top: 5rem;
     }
     .project-text {
         max-width: 90%;
     }
-    .git-links {
-        font-size: 1.2rem;
-    }
 }
 
 @media only screen and (max-width: 420px) {
-    .git-links {
-        width: 120px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    .end-button {
-        width: 95%;
-    }
 }
 /*------------------------------- Footer ----------------------------------*/
 
 footer {
     position: relative;
-    padding: 140px 0 140px 0;
+    padding: 2rem 0 10rem 0;
     width: 100%;
-    border-top: double 6px var(--black-accent);
+    border-top: double .5rem var(--backgroundd-accent);
 }
 
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer a {
+    color: var(--main-text-and-accent-color);
+    text-decoration-color: var(--main-pop-color);
+}
+
+.footer a:hover {
+    text-decoration: none;
 }
 
 .resources {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-}
-
-.footer h4 {
-    font-size: 1.3rem;
-    padding-bottom: 80px;
-    letter-spacing: 5px;
-    color: rgb(131, 131, 131);
-}
-
-.resources ul {
-    list-style: none;
-}
-
-.resources li {
-    line-height: 60px;
-    text-align: center;
-}
-
-.resources li a {
-    text-decoration: none;
-    font-size: .9rem;
-    color: rgb(131, 131, 131);
-}
-
-.resources li a:hover {
-    text-decoration: underline
 }
 
 .dan-co {
@@ -700,5 +720,25 @@ footer {
     transform: translateX(-50%);
 }
 
+.footer-text {
+    font-size: .8rem;
+    line-height: 1.1rem;
+    padding: 2rem 1rem;
+    max-width: 500px;
+}
 
+.footer-dl {
+    max-width: 250px;
+    margin: 0 1rem;
+}
 
+.footer-dl dt {
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.footer-dl dd {
+    margin: 1.4rem 0 2rem 0;
+    font-size: .6rem;
+    line-height: 1.1rem;
+}

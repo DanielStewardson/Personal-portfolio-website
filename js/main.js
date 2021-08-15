@@ -109,7 +109,7 @@ function enableScroll() {
 /*---------------------------- Retro mode toggle -------------------------------*/
 
 const togButton = document.getElementById("retro-mode-butt");
-const settings = document.querySelector('.site-settings');
+const settings = document.querySelector(':root');
 const gitIcon = document.querySelector('.github-icon-1');
 const gitIcon2 = document.querySelector('.github-icon-2');
 const links = document.querySelector('a');

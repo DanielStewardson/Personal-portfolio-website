@@ -1,8 +1,3 @@
-html[theme=boring] {
-    box-sizing: border-box;
-    font-size: 24px;
-}
-
 .retro-mode-label {
     position: fixed;
     z-index: 9;
@@ -22,7 +17,7 @@ html[theme=boring] {
     bottom: 1px;
     width: 38px;
     height: 38px;
-    transition: .1s;
+    transition: .3s;
 }
 
 .switch-bubble {
@@ -50,15 +45,9 @@ html[theme=boring] {
     display: block;
 }
 
-.site-settings[theme=boring] {
-    background-color: hsl(0, 0%, 86%);
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(56, 56, 56);
-}
-
 a[theme=boring] {
     text-decoration: none;
-    color: rgb(56, 56, 56);
+    color: var(--main-text-and-accent-color);
 }
 
 .github-icon-1[theme=boring] {
