@@ -14,29 +14,29 @@ html {
     }
 }
 
-/* hsl(325, 100%, 50%); pink pop */
-
 :root[theme=retro] {
     --font-size: 16px;
     --font-size-media: 13px;
-    --main-pop-color: hsl(33, 100%, 50%);
-    --accent-pop-color: hsl(33, 100%, 50%);
-    --main-text-and-accent-color: hsl(0, 0%, 92%);
+    --main-pop-color: hsl(34, 100%, 63%);
+    --accent-pop-color: hsl(34, 100%, 63%);
+    --main-text-and-accent-color: hsl(0, 0%, 100%);
     --button-border: hsl(33, 100%, 42%);
     --button-text: hsl(0, 0%, 92%);
     --button-text-shadow: hsl(33, 100%, 34%);
     --button-hover-color: hsl(0, 0%, 92%);
-    --background-color: hsl(0, 0%, 6%);
+    --background-color: hsl(210, 3%, 12%);
     --backgroundd-accent: hsl(0, 0%, 12%);
+    --division-background-color: hsl(34, 100%, 63%);
     --background-accent-borders: hsl(0, 0%, 20%);
-    --main-font: 'Press Start 2P', cursive;
+    --main-font: 'Quicksand', sans-serif;
+    --headers-font: 'Monoton', cursive;
     --retro-box-shadow-left: hsla(33, 100%, 50%, 0.4) -.31rem .31rem, hsla(33, 100%, 50%, 0.3) -.62rem .62rem, hsla(33, 100%, 50%, 0.2) -.94rem .94rem, hsla(33, 100%, 50%, 0.1) -1.25rem 1.25rem, hsla(33, 100%, 50%, 0.05) -1.56rem 1.56rem;
     --retro-box-shadow-right: hsla(33, 100%, 50%, 0.4) .31rem .31rem, hsla(33, 100%, 50%, 0.3) .62rem .62rem, hsla(33, 100%, 50%, 0.2) .94rem .94rem, hsla(33, 100%, 50%, 0.1) 1.25rem 1.25rem, hsla(33, 100%, 50%, 0.05) 1.56rem 1.56rem;
 }
 
 :root[theme=boring] {
-    --font-size: 25px;
-    --font-size-media: 20px;
+    --font-size: 16px;
+    --font-size-media: 13px;
     --main-pop-color: hsl(325, 100%, 50%, .6);
     --accent-pop-color: hsl(32, 100%, 43%);
     --main-text-and-accent-color: hsl(0, 0%, 17%);
@@ -48,9 +48,10 @@ html {
     --backgroundd-accent: hsla(197, 65%, 40%, 0.281);
     --background-accent-borders: hsla(197, 65%, 40%, 0.281);
     --main-font: 'Quicksand', sans-serif;
+    --headers-font: 'Press Start 2P', cursive;
 }
 
-.site-settings {
+body {
     background-color: var(--background-color);
     font-family: var(--main-font);
     color: var(--main-text-and-accent-color);
@@ -61,8 +62,14 @@ a[theme=retro] {
     color: var(--main-text-and-accent-color);
 }
 
-a:hover {
-    color: var(--main-pop-color);
+img {
+    width: 100%;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 90%;
 }
 
 @keyframes blinker {
@@ -79,7 +86,7 @@ a:hover {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   /* Track */
@@ -103,8 +110,8 @@ a:hover {
 .github-icon-1[theme=retro] {
     position: fixed;
     z-index: 10;
-    bottom: 40px;
-    right: 40px;
+    bottom: 28px;
+    right: 28px;
     width: 45px;
 }
 
@@ -118,7 +125,7 @@ a:hover {
     z-index: 10;
     bottom: 70px;
     right: 20px;
-    width: 260px;
+    width: 200px;
 }
 
 .github-icon:hover,
@@ -135,19 +142,21 @@ a:hover {
 
 .top-nav {
     position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: .8rem;
     z-index: 10;
 }
 
-.top-nav a {
-    margin-left: .5rem;
-    font-size: 1.8rem;
+.logo {
+    margin-left: 1rem;
+    font-size: 2rem;
+    letter-spacing: .2rem;
     text-decoration: none;
     color: var(--main-text-and-accent-color);
+    font-family: var(--headers-font);
 }
 
 .nav-button {
@@ -155,8 +164,8 @@ a:hover {
 }
 
 .nav-button-label {
-    padding: .6rem 0;
-    margin-right: 2.5rem;
+    padding: 1rem 0;
+    margin-right: 1rem;
     cursor: pointer;
 }
 
@@ -165,8 +174,8 @@ a:hover {
 .nav-button-label span::after {
     display: block;
     background-color: var(--main-text-and-accent-color);
-    height: .25rem;
-    width: 2.8rem;
+    height: .16rem;
+    width: 2.4rem;
     position: relative;
     transition: .5s ease,
                 background-color 0s;
@@ -179,22 +188,22 @@ a:hover {
 }
 
 .nav-button-label span::before {
-    bottom: .85rem;
+    bottom: .75rem;
 }
 
 .nav-button-label span::after {
-    top: .85rem;
+    top: .75rem;
 }
 
-.nav-button-label span:hover,
-.nav-button-label span:hover::before,
-.nav-button-label span:hover::after {
-    background-color: var(--main-pop-color);;
+.nav-button:hover ~ label span, 
+.nav-button:hover ~ label span::before,
+.nav-button:hover ~ label span::after {
+    background-color: var(--main-pop-color);
 }
 
 .top-nav a:hover,
 .top-nav a:focus {
-    color: var(--main-pop-color);;
+    color: var(--main-pop-color);
 }
 
 @media screen and (max-width: 1640px) {
@@ -250,8 +259,11 @@ a:hover {
 }
 
 .slide-nav li a {
-    font-size: 3rem;
+    font-size: 2.6rem;
     letter-spacing: .2rem;
+    font-family: var(--headers-font);
+    color: var(--main-text-and-accent-color);
+    text-decoration: none;
 }
 
 .slide-nav li a::before {
@@ -344,24 +356,23 @@ header {
     height: 100vh;
 }
 
-.head-wrap {
+.head-wrap {          /* to set text position in header*/
     height: 100vh;
 }
 
 .intro-text {
     position: relative;
-    top: 45%;
-    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 1rem;
     max-width: 640px;
 }
 
-.first-letter {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.name {
-    font-size: 2rem;
+.header-title {
+    font-size: 6rem;
+    letter-spacing: .2rem;
+    line-height: 5rem;
+    font-family: var(--headers-font);
 }
 
 .intro-text h1 {
@@ -371,10 +382,6 @@ header {
     line-height: 3rem;
 } 
 
-strong {
-    font-size: 2rem;
-}
-
 .down-arrow {
     position: absolute;
     bottom: 1rem;
@@ -383,119 +390,105 @@ strong {
     width: 2rem;
 }
 
-@media only screen and (max-width: 420px) {
-    .intro-text {
-        top: 35%;
-    }
-}
+/*------------------------------- Project section ----------------------------------*/
 
-/*------------------------------- Main ----------------------------------*/
-
-img {
+.projects {
+    background-color: var(--background-color);
+    position: relative;
     width: 100%;
+    height: 50rem;
+    padding: 4rem 0;
 }
 
-.section {
-    width: 100%;
-    overflow: hidden;
-}
-
-.wrap {
-    margin: 0 auto;
-    max-width: 1100px;
-    width: 90%;
-}
-
-.page-link {              /*addon to orange buttons*/
-    display: inline-flex;
-    width: 9.5rem;
-    height: 2rem;
-    margin: 1rem 0;
-}
-
-.down-arrow-inflow {
-    width: 2rem;
-}
-
-/*------------------------------- Fill ----------------------------------*/
-
-.fill {
+.project-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    width: 80%;
+    max-width: 1000px;
+    border: var(--division-background-color) solid 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px .5rem 2rem, rgba(0, 0, 0, 0.60) 0px .5rem 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
-    padding: 480px 16px;
-    font-size: 1.6rem;
-    max-width: 800px;
+    background-color: var(--background-color);
 }
 
-.fill h2 {
-    font-weight: normal;
+.project-text {
+    line-height: 1.8rem;
+    padding: 1rem;
+    margin: 3rem .2rem;
+    width: 80%;
+    border-radius: 30px;
+    text-align: center;
 }
 
-.first-fill-left {
-    margin: 1.5rem auto 1.5rem 12rem;
-}
-.first-fill-right {
-    margin: 1.5rem 12rem 1.5rem auto;
+.project-text a {
+    text-decoration: none;
+    color: var(--main-pop-color);
 }
 
-.second-fill-left {
-    margin: 1.5rem auto 1.5rem 0;
-}
-.second-fill-right {
-    margin: 1.5rem 0 1.5rem auto;
+.project-text a:hover {
+    text-decoration: underline;
 }
 
-.third-fill-left {
-    display: inline-block;
-}
-.third-fill-right {
-    display: inline-block;
-}
-
-.fill span {
-    color: var(--accent-pop-color);
-}
-
-@media only screen and (max-width: 600px) {
-    .slide-in-left {
-        margin: 1.5rem 0 1.5rem auto;
-    }
-    .slide-in-right {
-        margin: 1.5rem 0 1.5rem auto;
-    }
-    .fill h2 {
-        text-align: right;
-    }
-    .center-fill-text {
-        text-align: right;
-    }
+.project-text h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
 }
 
 /*------------------------------- About Section ----------------------------------*/
 
-.about-image {
-    max-width: 300px;
-    margin-top: auto;
+.about {
+    background-color: var(--division-background-color);
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50rem;
+    margin: 10rem 0;
+}
+
+.about-background-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--headers-font);
+    font-size: 15vw;
+    opacity: .6;
 }
 
 .about-box {
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    width: 80%;
+    max-width: 1000px;
+    border: var(--division-background-color) solid 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 .5rem 2rem, rgba(0, 0, 0, 0.60) 0px .5rem 1rem;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    max-width: 1100px;
+    background-color: var(--background-color);
+}
+
+.about-box-top {
+    top: -12%;
+}
+.about-box-bottom {
+    bottom: -12%;
 }
 
 .about-text {
     line-height: 1.8rem;
-    font-size: .8rem;
     padding: 1rem;
+    margin: 3rem .2rem;
     width: 80%;
 }
 
 .about-text h2 {
+    text-align: center;
     font-size: 2rem;
     margin-bottom: 4rem;
 }
@@ -508,184 +501,28 @@ img {
 }
 
 .known-tech-icon {
-    width: 7rem;
-}
-
-.mini-dan {
-    display: none;
+    width: 5rem;
 }
 
 @media  only screen and (max-width: 760px) {
-    .about-image {
-        display: none;
-    }
     .about-text {
         width: 100%;
     }
-    .mini-dan {
-        display: block;
+}
+
+@media  only screen and (max-width: 460px) {
+    .about {
+        height: 62rem;
     }
 }
 
-/*------------------------------- Project section ----------------------------------*/
-
-.flex-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-outer-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.project-inner-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.project-box {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    max-width: 450px;
-    padding: .2rem 0rem;
-    margin-top: 15rem;
-    background-color: var(--backgroundd-accent);
-    border: 1rem groove var(--background-accent-borders);
-}
-
-.project-box-left {
-    box-shadow: var(--retro-box-shadow-left);
-    margin-right: auto;
-}
-
-.project-box-right {
-    box-shadow: var(--retro-box-shadow-right);
-    margin-left: auto;
-}
-
-.section-title h2 {
-    margin-bottom: 4rem;
-    font-size: 1.6rem;
-}
-
-.project-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 350px;
-    height: 21rem;
-    margin: 1rem 1rem 1rem 1rem;
-    line-height: 1.2rem;
-    font-size: .7rem;
-}
-
-.project-text h3 {
-    font-size: 1.2rem;
-    letter-spacing: .1rem;
-    line-height: 2rem;
-}
-
-.project-img {
-    position: relative;
-    max-width: 560px;
-    margin: 1rem;
-    border: var(--accent-pop-color) 4px double;
-    box-shadow: rgb(0, 0, 0) 0px 20px 20px -5px;
-    overflow: hidden;
-}
-
-.image-overlay {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: .5;
-    transition: .4s ease;
-}
-.image-overlay img {
-    width: 20%;
-}
-
-.project-img:hover {
-    transform: translateY(-8px);
-}
-
-.project-img:hover .used-tech-box {
-    bottom: -100%;
-    opacity: 0;
-}
-
-.project-img:hover .image-overlay { 
-    top: -100%;
-    opacity: 0;
-}
-
-.git-links {          /*add on orange buttons*/
-    display: inline-flex;
-    width: 8rem;
-    height: 2.5rem;
-    font-size: .8rem;
-}
-
-.git-box {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.used-tech-box {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    padding: .6rem 0;
-    justify-content: space-evenly;
-    width: 100%;
-    font-size: .8rem;
-    transition: .5s ease;
-}
-
-.end-button {           /* orange button addon*/
-    width: 21.8rem;
-    height: 6.25rem;
-    font-size: 1.5rem;
-    margin: 8rem 0;
-    border: var(--button-border) .8rem groove;
-}
-
-@media only screen and (max-width: 1080px) {
-    .project-outer-wrapper {
-        justify-content: center;
-    }
-    .project-box {
-        width: 90%;
-        margin-top: 5rem;
-    }
-    .project-text {
-        max-width: 90%;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-}
 /*------------------------------- Footer ----------------------------------*/
 
 footer {
     position: relative;
     padding: 2rem 0 10rem 0;
     width: 100%;
-    border-top: double .5rem var(--backgroundd-accent);
+    border-top: solid .3rem var(--main-pop-color);
 }
 
 .footer {
@@ -717,7 +554,6 @@ footer {
 }
 
 .footer-text {
-    font-size: .8rem;
     line-height: 1.1rem;
     padding: 2rem 1rem;
     max-width: 500px;
@@ -729,12 +565,11 @@ footer {
 }
 
 .footer-dl dt {
-    font-size: .8rem;
     text-transform: uppercase;
 }
 
 .footer-dl dd {
     margin: 1.4rem 0 2rem 0;
-    font-size: .6rem;
+    font-size: .8rem;
     line-height: 1.1rem;
 }

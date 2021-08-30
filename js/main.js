@@ -33,35 +33,6 @@ window.onload = () => {
     }
 };
 
-/*----------------------------- Slide in elements --------------------------------*/
-
-const slideInStuff = document.querySelectorAll('.slide-in-left, .slide-in-right, .fade-in');
-
-function checkSlide(e) {
-
-    slideInStuff.forEach(slide => {
-        // half way through image
-        const slideInAt = (window.scrollY + window.innerHeight);
-        console.log(slideInAt)
-        //bottom of slide item
-        const itemBottom = slide.offsetTop + slide.clientHeight;
-        console.log(itemBottom)
-        //half way through the item
-        const isHalfShown = slideInAt > slide.offsetTop;
-        
-        const isNoScrolledPast = window.scrollY < itemBottom;
-        
-        if(isHalfShown && isNoScrolledPast) {
-            slide.classList.add('active');
-            } else {
-            slide.classList.remove('active');
-            }
-            })
-            
-}
-
-window.addEventListener('scroll', debounce(checkSlide));
-
 /*----------------------------- De-bounce function --------------------------------*/
 
 function debounce(func, wait = 20, immediate = true) {
@@ -126,13 +97,11 @@ function toggle() {
 }
 
 //Check localStorage
-//It's commented out because it doesn't work in Stack Overflow snippet
 darkOn = localStorage.getItem("dark") == "true" ? true : false;
 setTheme();
 
 function setTheme() {
   //Save to localStorage
-  //It's commented out because it doesn't work in Stack Overflow snippet
   localStorage.setItem("dark", darkOn ? "true" : "false");
   if(darkOn){
     settings.setAttribute("theme", "boring");

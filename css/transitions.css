@@ -29,28 +29,3 @@
 .transition-2.is-active-2 {
     left: 0;
 }
-
-/* ------------------------------ Text slide transitions ---------------------*/
-
-.slide-in-left {
-    transform:translateX(-1200%);
-}
-
-.slide-in-right {
-    transform:translateX(1200%);
-}
-
-.fade-in {
-    opacity: 0;
-}
-
-.slide-in-left.active,
-.slide-in-right.active {
-    transform:translateX(0);
-    transition: .5s ease-out;
-}
-
-.fade-in.active {
-    opacity: 1;
-    transition: 1s ease-out;
-}

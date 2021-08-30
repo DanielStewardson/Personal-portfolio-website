@@ -24,209 +24,199 @@
         <script src="../js/tiles.js" async defer></script>
     </head>
 
-    <body class='projects'>
-        <div class="site-settings">
+    <body>
 
-            <div class="transition-1 is-active"></div>
-            <div class="transition-2 is-active-2"></div>
+        <div class="transition-1 is-active"></div>
+        <div class="transition-2 is-active-2"></div>
+    
+        <nav class='top-nav'>
+            <div class='logo'><a href='../index.html' class="slide">D.S.</a></div>
+            
+            <input type='checkbox' class='nav-button' id='nav-button' name="nav-butt">
+            <label for='nav-button' class='nav-button-label'>
+                <span></span>
+            </label>
+
+            <div class='slide-one'></div>
+            
+            <nav class='slide-nav'>
+                <ul>
+                    <li><a href='../index.html' class="slide">Home</a></li>
+                    <li><a href='about.html' class="slide">About</a></li>
+                    <li><a href='projects.html' class="slide">Projects</a></li>
+                    <li><a href='contact.html' class="slide">Contact</a></li>
+                </ul>
+            </nav>
+        </nav> 
+
+                            <!-- Fixed overlays, retro button etc -->
+        <div>
+            <div class='retro-mode-label' id="retro-mode-butt">             <!--Retro button-->
+                <img src="../resources/icons/coin-button.png" class="coin-switch">
+            </div> 
+            <img src='../resources/pictures/not-a-fan.png' class='switch-bubble switch-bubble-1 active'>
+            <img src='../resources/pictures/love8bit.png' class='switch-bubble switch-bubble-2 active'>    
+
+            <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-1 github-icon">
+                <img src="../resources/icons/github2.png">
+            </a>
+            <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-2 github-icon">
+                <img src="../resources/icons/githubicon4.png">
+            </a>
+            <img src='../resources/pictures/gitHub-bubble-right.png' class='github-bubble'>
+        </div>
+
+        <header>
+            <div class='wrap head-wrap'>
+                <article class='intro-text'>
+                    <h1>The scrapyard.<br>
+                    Here's some stuff I've bodged together so far.</h1>
+                </article>
+
+                <img src='../resources/icons/white-arrow.png' class='down-arrow blinker'>
+            </div>   
+        </header>
         
-            <nav class='top-nav'>
-                <div class='logo'><a href='../index.html' class="slide">D.S.</a></div>
-                
-                <input type='checkbox' class='nav-button' id='nav-button' name="nav-butt">
-                <label for='nav-button' class='nav-button-label'>
-                    <span></span>
-                </label>
+        <main>
+            <section class='section'>
+                <div class="wrap">
+                    <article class="projects-intro  active">
+                        <h2>Projects</h2>
+                        <br><br>
+                        <p>Here's a sample of some things I have created or worked on.</p>
+                    </article> 
+                </div>
+            </section>
 
-                <div class='slide-one'></div>
-                
-                <nav class='slide-nav'>
-                    <ul>
-                        <li><a href='../index.html' class="slide">Home</a></li>
-                        <li><a href='about.html' class="slide">About</a></li>
-                        <li><a href='projects.html' class="slide">Projects</a></li>
-                        <li><a href='contact.html' class="slide">Contact</a></li>
-                    </ul>
-                </nav>
-            </nav> 
+            <section class="section">
+                <div class="wrap">
+                    <div class="project-tiles">
 
-                                <!-- Fixed overlays, retro button etc -->
-            <div>
-                <div class='retro-mode-label' id="retro-mode-butt">             <!--Retro button-->
-                    <img src="../resources/icons/coin-button.png" class="coin-switch">
-                </div> 
-                <img src='../resources/pictures/not-a-fan.png' class='switch-bubble switch-bubble-1 active'>
-                <img src='../resources/pictures/love8bit.png' class='switch-bubble switch-bubble-2 active'>    
-
-                <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-1 github-icon">
-                    <img src="../resources/icons/github2.png">
-                </a>
-                <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-2 github-icon">
-                    <img src="../resources/icons/githubicon4.png">
-                </a>
-                <img src='../resources/pictures/gitHub-bubble-right.png' class='github-bubble'>
-            </div>
-
-            <header>
-                <div class='wrap head-wrap'>
-                    <article class='intro-text'>
-                        <h1><span class="first-letter">T</span>he scrapyard.<br>
-                        Here's some stuff I've bodged together so far<span class="blinker">.</span></h1>
-                    </article>
-
-                    <img src='../resources/icons/white-arrow.png' class='down-arrow blinker'>
-                </div>   
-            </header>
-            
-            <main>
-                
-                <section class='section'>
-                    <div class='wrap fill'>
-                        <h2 class="slide-in-left second-fill-left active">Practice</h2>
-                        <h2 class="slide-in-right second-fill-right active"><span>makes perfect.</span></h2>
-                    </div>
-                </section>
-
-                <section class='section'>
-                    <div class="wrap">
-                        <article class="projects-intro slide-in-right active">
-                            <h2>Projects</h2>
-                            <br><br>
-                            <p>Here's a sample of some things I have created or worked on.</p>
-                        </article> 
-                    </div>
-                </section>
-
-                <section class="section">
-                    <div class="wrap">
-                        <div class="project-tiles">
-
-                            <div class="project-tile tile-1">
-                                <div class="tile-links">
-                                    <a href='https://danielstewardson.github.io/Reactive-nav-bar/' target='_blank' class='tile-link orange-button'>Live site</a>
-                                    <a href='https://github.com/DanielStewardson/Reactive-nav-bar' target='_blank' class='tile-link orange-button'>GitHub</a>
-                                </div>
-                            </div>
-
-                            <div class="project-tile tile-2">
-                                <div class="tile-links">
-                                    <a href='https://danielstewardson.github.io/Flex-landing-page/' target='_blank' class='tile-link orange-button'>Live site</a>
-                                    <a href='https://github.com/DanielStewardson/Flex-landing-page' target='_blank' class='tile-link orange-button'>GitHub</a>
-                                </div>
-                            </div>
-
-                            <div class="project-tile tile-3">
-                                <div class="tile-links">
-                                    <a href='https://danielstewardson.github.io/Fotomatic---Codecademy-fix-project/' target='_blank' class='orange-button git-links'>Live site</a>
-                                    <a href='https://github.com/DanielStewardson/Fotomatic---Codecademy-fix-project' target='_blank' class='orange-button git-links'>GitHub</a>
-                                </div>
-                            </div>
-
-                            <div class="project-tile tile-4">
-                                <div class="tile-links">
-                                    <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
-                                    <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
-                                </div>
-                            </div>
-
-                            <div class="project-tile tile-5">
-                                <div class="tile-links">
-                                    <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
-                                    <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
-                                </div>
-                            </div>
-
-                            <div class="project-tile tile-6">
-                                <div class="tile-links">
-                                    <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
-                                    <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-            
-            </main>
-
-            <footer>
-                <div class='footer'>
-                    
-                    <div class="resources">
-
-                        <div class="footer-text">
-                            <p>I am a developing, front-end developer, with a few months experience and a lot of drive.<br><br>
-                                I strive to create successful websites that are the best they can be, everytime.
-                            </p>
-                            <br><br>
-                            <div>
-                                <span class="blinker">&gt; </span><a href="#" target="_blank">AVAILABLE FOR HIRE NOW</a><span class="blinker">.</span>
+                        <div class="project-tile tile-1">
+                            <div class="tile-links">
+                                <a href='https://danielstewardson.github.io/Reactive-nav-bar/' target='_blank' class='tile-link orange-button'>Live site</a>
+                                <a href='https://github.com/DanielStewardson/Reactive-nav-bar' target='_blank' class='tile-link orange-button'>GitHub</a>
                             </div>
                         </div>
 
-                       <div class="footer-dl">
-                            <dl>
-                                <div>
-                                    <dt>
-                                        <a href="https://github.com/DanielStewardson" target="_blank">my GitHub</a>
-                                    </dt>
-                                    <dd>
-                                        Check out my latest tinkerings
-                                    </dd>
-                                </div>
-                                <div>
-                                    <dt>
-                                        <a href="#" target="_blank">LinkedIn</a>
-                                    </dt>
-                                    <dd>
-                                        Connect on LinkedIn
-                                    </dd>
-                                </div>
-                                <div>
-                                    <dt>
-                                        <a href="#" target="_blank">CodeCademy</a>
-                                    </dt>
-                                    <dd>
-                                        See what I'm learning right now
-                                    </dd>
-                                </div>
-                            </dl>
+                        <div class="project-tile tile-2">
+                            <div class="tile-links">
+                                <a href='https://danielstewardson.github.io/Flex-landing-page/' target='_blank' class='tile-link orange-button'>Live site</a>
+                                <a href='https://github.com/DanielStewardson/Flex-landing-page' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            </div>
                         </div>
-                        
-                        <div class="footer-dl">
-                            <dl>
-                                <div>
-                                    <dt>
-                                        <a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a>
-                                    </dt>
-                                    <dd>
-                                        Awesome site that generates 8-bit speech bubbles
-                                    </dd>
-                                </div>
-                                <div>
-                                    <dt>
-                                        <a href="https://icons8.com/" target="_blank">icons8.com</a>
-                                    </dt>
-                                    <dd>
-                                        Loads of free or premium icons
-                                    </dd>
-                                </div>
-                                <div>
-                                    <dt>
-                                        <a href="https://www.remove.bg/upload" target="_blank">remove.bg</a>
-                                    </dt>
-                                    <dd>
-                                        Remove unwanted backgrounds around icons etc
-                                    </dd>
-                                </div>
-                            </dl>
+
+                        <div class="project-tile tile-3">
+                            <div class="tile-links">
+                                <a href='https://danielstewardson.github.io/Fotomatic---Codecademy-fix-project/' target='_blank' class='orange-button git-links'>Live site</a>
+                                <a href='https://github.com/DanielStewardson/Fotomatic---Codecademy-fix-project' target='_blank' class='orange-button git-links'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-4">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-5">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project-tile tile-6">
+                            <div class="tile-links">
+                                <a href='#' target='_blank' class='tile-link orange-button'>Live site</a>
+                                <a href='#' target='_blank' class='tile-link orange-button'>GitHub</a>
+                            </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="dan-co">dan.co</div>  
-            </footer>
+            </section>
+        
+        </main>
 
-        </div>
+        <footer>
+            <div class='footer'>
+                
+                <div class="resources">
+
+                    <div class="footer-text">
+                        <p>I am a developing, front-end developer, with a few months experience and a lot of drive.<br><br>
+                            I strive to create successful websites that are the best they can be, everytime.
+                        </p>
+                        <br><br>
+                        <div>
+                            <span class="blinker">&gt; </span><a href="#" target="_blank">AVAILABLE FOR HIRE NOW</a><span class="blinker">.</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-dl">
+                        <dl>
+                            <div>
+                                <dt>
+                                    <a href="https://github.com/DanielStewardson" target="_blank">my GitHub</a>
+                                </dt>
+                                <dd>
+                                    Check out my latest tinkerings
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>
+                                    <a href="#" target="_blank">LinkedIn</a>
+                                </dt>
+                                <dd>
+                                    Connect on LinkedIn
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>
+                                    <a href="#" target="_blank">CodeCademy</a>
+                                </dt>
+                                <dd>
+                                    See what I'm learning right now
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                    
+                    <div class="footer-dl">
+                        <dl>
+                            <div>
+                                <dt>
+                                    <a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a>
+                                </dt>
+                                <dd>
+                                    Awesome site that generates 8-bit speech bubbles
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>
+                                    <a href="https://icons8.com/" target="_blank">icons8.com</a>
+                                </dt>
+                                <dd>
+                                    Loads of free or premium icons
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>
+                                    <a href="https://www.remove.bg/upload" target="_blank">remove.bg</a>
+                                </dt>
+                                <dd>
+                                    Remove unwanted backgrounds around icons etc
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+            <div class="dan-co">dan.co</div>  
+        </footer>
+
     </body>
 </html>
