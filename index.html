@@ -12,7 +12,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/transitions.css">
-        <link rel="stylesheet" href="css/retro-mode.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
     </head>
 
     <body> 
-
+        <div class="background-image"></div>
         <div class="transition-1 is-active"></div>
         <div class="transition-2 is-active-2"></div>
     
@@ -34,7 +33,7 @@
             <label for='nav-button' class='nav-button-label'>
                 <span></span>
             </label>
-                        <!-- Slide in navigation -->
+                        <!---------------------- Slide in navigation ---------------------->
             <div class='slide-one'></div>
 
             <nav class='slide-nav'>
@@ -46,23 +45,13 @@
                 </ul>
             </nav>
         </nav>
-                        <!-- Fixed overlays, retro button etc -->
+                        <!--------------------- Fixed overlays, retro button etc --------------------------->
         <div>
-            <div class='retro-mode-label' id="retro-mode-butt">                 <!--Retro button-->
+            <div class='retro-mode-label' id="retro-mode-butt">                 <!---------------------- Retro button ---------------------->
                 <img src="resources/icons/coin-button.png" class="coin-switch">
             </div>
-            <img src='resources/pictures/not-a-fan.png' class='switch-bubble switch-bubble-1 active'>
-            <img src='resources/pictures/love8bit.png' class='switch-bubble switch-bubble-2 active'>             
-
-            <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-1 github-icon">
-                <img src="resources/icons/github2.png">
-            </a>
-            <a href='https://github.com/DanielStewardson' target='_blank' class="github-icon-2 github-icon">
-                <img src="resources/icons/githubicon4.png">
-            </a>
-            <img src='resources/pictures/gitHub-bubble-right.png' class='github-bubble'>
         </div>
-                    <!-- Header -->
+                    <!---------------------- Header ---------------------->
         <header>
             <div class='wrap head-wrap'>
                 <article class='intro-text'>
@@ -76,55 +65,57 @@
         
         <main>
 
-            <!-- Projects section -->
+                            <!------------------- Projects section ------------------->
             <section class='projects'>
-                <div class='wrap'>
-                    <div class="project-box">
-                        <article class='project-text'>
-                            <h2>My portfolio.</h2>
-                            
-                            <p>Here are a few examples of projects i've worked on so far.<br>
-                            Check out more on <a href='html\projects.html'>my projects page</a>.</p>
-                        </article>
-                    </div>
-                </div>
+                    <article class="project-text wrap">
+                        <h2>My &nbsp; Portfolio</h2>
+                        <p>Here is a selection of projects I have created or worked on.<br>
+                            <span class="blinker">&gt; </span>Find more on my <a href="html\projects.html">projects page.</a></p>
+                    </article>
+                <div class="project-gallery">Gallery to go here</div>
             </section>
                         
-                                <!-- About section -->
-            <section class='about'>
-                <div class='wrap'>
-                    <div class="about-box about-box-top">
-                        <article class="about-text">
-                            <h2>Coffee and code.</h2>
-                            <p><span class="blinker">&gt; </span>I started my dev journey in 2021.<br><br>
-                            Once I started learning to code, I found I got a real buzz out of creating something or solving a problem. <br>Even if it 
-                            did cause some frustration on the way.<br><br>
-                            I now practice and learn new things every day and can't wait to join a team, get stuck in and get even better!</p>
-                        </article>
-                    </div>
+                                <!---------------------- About section ---------------------->
 
-                    <div class="about-box about-box-bottom">
-                        <article class="about-text">
-                            <h2>Journey so far.</h2>
-                            <p><span class="blinker">&gt; </span>I love seeing ideas and designs coming to life.<br><br>
-                            I am competent using HTML, CSS, Javascript and collaberating through Github <br>
-                        and am currently working on making better responsive websites and learning React JS.</p>
-                        <div class="tech-icon-box active">
-                            <div class="known-tech-icon ">
-                                <img src="resources\pictures\html-icon.png">
-                            </div>
-                            <div class="known-tech-icon">
-                                <img src="resources/pictures/css3.png">
-                            </div>
-                            <div class="known-tech-icon">
-                                <img src="resources/pictures/js-icon.png">
+            <section class='projects'>
+                    <div class='about-container wrap'>
+                        <article class="project-text">
+                            <h2>Coffee &nbsp;&&nbsp; code</h2>
+                            <p>I started my dev journey during the Covid lockdown in 2021.<br><br>
+                                Once I started learning to code, I found I got a real buzz out of creating something or solving a problem. <br>Even if it 
+                                did cause some frustration on the way.<br><br>
+                                I now practice and learn new things every day and can't wait to join a team, get stuck in and get even better!<br><br>
+                                <span class="blinker">&gt; </span>Find out more <a href="html\about.html">about me.</a>
+                            </p>
+                        </article>
+
+                        <div class='skills-container'>
+                            <h3>What &nbsp; I &nbsp; speak</h3>
+
+                            <div class='skills'>
+                                <div class="tech-icons">
+                                    <div class="known-tech-icon">
+                                        <img src="resources\pictures\html-icon.png">
+                                    </div>
+                                    <div class="known-tech-icon">
+                                        <img src="resources/pictures/css3.png">
+                                    </div>
+                                    <div class="known-tech-icon">
+                                        <img src="resources/pictures/js-icon.png">
+                                    </div>
+                                </div>
+
+                                <p>
+                                    I am competent working with HTML, CSS and JavaScript and collaberating with GitHub.<br><br>
+                                    I'm constantly updating my skills & love learning a new trick.
+                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
-                                <!-- Contact section -->
+
+                                <!---------------------- Contact section ---------------------->
             <section class='contact section'>
                 <div class='wrap'>
                     
@@ -134,9 +125,7 @@
 
         
         <footer>
-            <div class='footer'>
-                
-                <div class="resources">
+                <div class="resources wrap">
 
                     <div class="footer-text">
                         <p>I am a developing, front-end developer, with a few months experience and a lot of drive.<br><br>
@@ -148,66 +137,68 @@
                         </div>
                     </div>
 
-                    <div class="footer-dl">
-                        <dl>
-                            <div>
-                                <dt>
-                                    <a href="https://github.com/DanielStewardson" target="_blank">my GitHub</a>
-                                </dt>
-                                <dd>
-                                    Check out my latest tinkerings
-                                </dd>
-                            </div>
-                            <div>
-                                <dt>
-                                    <a href="#" target="_blank">LinkedIn</a>
-                                </dt>
-                                <dd>
-                                    Connect on LinkedIn
-                                </dd>
-                            </div>
-                            <div>
-                                <dt>
-                                    <a href="#" target="_blank">CodeCademy</a>
-                                </dt>
-                                <dd>
-                                    See what I'm learning right now
-                                </dd>
-                            </div>
-                        </dl>
-                    </div>
+                    <div class='resource-list'>
+                        <div class="footer-dl">
+                            <dl>
+                                <div>
+                                    <dt>
+                                        <a href="https://github.com/DanielStewardson" target="_blank">my GitHub</a>
+                                    </dt>
+                                    <dd>
+                                        - Check out my latest tinkerings
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>
+                                        <a href="#" target="_blank">LinkedIn</a>
+                                    </dt>
+                                    <dd>
+                                    - Connect on LinkedIn
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>
+                                        <a href="#" target="_blank">CodeCademy</a>
+                                    </dt>
+                                    <dd>
+                                        - See what I'm learning right now
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
                     
-                    <div class="footer-dl">
-                        <dl>
-                            <div>
-                                <dt>
-                                    <a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a>
-                                </dt>
-                                <dd>
-                                    Awesome site that generates 8-bit speech bubbles
-                                </dd>
-                            </div>
-                            <div>
-                                <dt>
-                                    <a href="https://icons8.com/" target="_blank">icons8.com</a>
-                                </dt>
-                                <dd>
-                                    Loads of free or premium icons
-                                </dd>
-                            </div>
-                            <div>
-                                <dt>
-                                    <a href="https://www.remove.bg/upload" target="_blank">remove.bg</a>
-                                </dt>
-                                <dd>
-                                    Remove unwanted backgrounds around icons etc
-                                </dd>
-                            </div>
-                        </dl>
+                    
+                        <div class="footer-dl">
+                            <dl>
+                                <div>
+                                    <dt>
+                                        <a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a>
+                                    </dt>
+                                    <dd>
+                                        - Awesome site that generates 8-bit speech bubbles
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>
+                                        <a href="https://icons8.com/" target="_blank">icons8.com</a>
+                                    </dt>
+                                    <dd>
+                                        - Loads of free or premium icons
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>
+                                        <a href="https://www.remove.bg/upload" target="_blank">remove.bg</a>
+                                    </dt>
+                                    <dd>
+                                        - Remove unwanted backgrounds around icons etc
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
                     </div>
 
                 </div>
-            </div>
             <div class="dan-co">dan.co</div>  
         </footer>
 
