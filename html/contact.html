@@ -66,17 +66,50 @@
         
         <main>
 
-            <section>
-                <div class='wrap'>
+            <section class="wrap contact-section-container">
+
+                <div class="contact-details">
+                    <h2>You can find me through the details below or fill in the form and hit the big button!</h2>
+                    <div class="footer-dl">
+                        <dl>
+                            <div>
+                                <dt>
+                                    <h3>Email</h3>
+                                </dt>
+                                <dd>
+                                    danzstewardson@hotmail.com
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>
+                                    <h3>Phone</h3>
+                                </dt>
+                                <dd>
+                                    07578095847
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>
+                                    <h3>On the web</h3>
+                                </dt>
+                                <dd>
+                                    - See what I'm learning right now
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="form-container">
                     <form action="mailto:danzstewardson@hotmail.com" method="POST" class='contact-form'>
-                        <label for='name' class='active'>Name<span class="blinker">:</span></label>
-                        <input type="text" id="name" name="user-name" placeholder="Enter name" class='active'>
+                        <label for='name'>Name<span class="blinker">:</span></label>
+                        <input type="text" id="name" name="user-name" placeholder="Enter name">
                         <br>
-                        <label for="email" class='active'>E-mail<span class="blinker">:</span></label>
-                        <input type="email" id='email' name="user-email" placeholder="Enter email address" class='active'>
+                        <label for="email" >E-mail<span class="blinker">:</span></label>
+                        <input type="email" id='email' name="user-email" placeholder="Enter email address">
                         
                         <label for="message" class='text-area-label active'>Enter your message here<span class="blinker">:</span></label>
-                        <textarea id='message' name='user-message' class='active' placeholder="Enter your message! Anything really.. Ideally constructive.&#10;&#10;Have a great day!"></textarea>
+                        <textarea id='message' name='user-message' placeholder="Enter your message! Anything really.. Ideally constructive.&#10;&#10;Have a great day!"></textarea>
                         
                         <button type="submit" class='form-button orange-button'>Submit</button>
                     </form>
@@ -87,20 +120,24 @@
 
         
         <footer>
-            <div class='footer'>
-                
-                <div class="resources">
+            <div class="footer-bg"></div>
+            <a role="button" title='back to top of page' tabindex="0" class="to-top-button" href='#top'>
+                <img class='up-arrow' src='../resources/icons/white-arrow.png'>
+            </a>
 
-                    <div class="footer-text">
-                        <p>I am a developing, front-end developer, with a few months experience and a lot of drive.<br><br>
-                            I strive to create successful websites that are the best they can be, everytime.
-                        </p>
-                        <br><br>
-                        <div>
-                            <span class="blinker">&gt; </span><a href="#" target="_blank">AVAILABLE FOR HIRE NOW</a><span class="blinker">.</span>
-                        </div>
+            <div class="resources wrap">
+
+                <div class="footer-text">
+                    <p>I am a developing, front-end developer, with a few months experience and a lot of drive.<br><br>
+                        I strive to create successful websites that are the best they can be, everytime.
+                    </p>
+                    <br><br>
+                    <div>
+                        <span class="blinker">&gt; </span><a href="#" target="_blank">AVAILABLE FOR HIRE NOW</a><span class="blinker">.</span>
                     </div>
+                </div>
 
+                <div class='resource-list'>
                     <div class="footer-dl">
                         <dl>
                             <div>
@@ -108,7 +145,7 @@
                                     <a href="https://github.com/DanielStewardson" target="_blank">my GitHub</a>
                                 </dt>
                                 <dd>
-                                    Check out my latest tinkerings
+                                    - Check out my latest tinkerings
                                 </dd>
                             </div>
                             <div>
@@ -116,7 +153,7 @@
                                     <a href="#" target="_blank">LinkedIn</a>
                                 </dt>
                                 <dd>
-                                    Connect on LinkedIn
+                                - Connect on LinkedIn
                                 </dd>
                             </div>
                             <div>
@@ -124,12 +161,13 @@
                                     <a href="#" target="_blank">CodeCademy</a>
                                 </dt>
                                 <dd>
-                                    See what I'm learning right now
+                                    - See what I'm learning right now
                                 </dd>
                             </div>
                         </dl>
                     </div>
-                    
+                
+                
                     <div class="footer-dl">
                         <dl>
                             <div>
@@ -137,7 +175,7 @@
                                     <a href="https://pixelspeechbubble.com/" target="_blank">pixelspeechbubble.com</a>
                                 </dt>
                                 <dd>
-                                    Awesome site that generates 8-bit speech bubbles
+                                    - Awesome site that generates 8-bit speech bubbles
                                 </dd>
                             </div>
                             <div>
@@ -145,7 +183,7 @@
                                     <a href="https://icons8.com/" target="_blank">icons8.com</a>
                                 </dt>
                                 <dd>
-                                    Loads of free or premium icons
+                                    - Loads of free or premium icons
                                 </dd>
                             </div>
                             <div>
@@ -153,16 +191,16 @@
                                     <a href="https://www.remove.bg/upload" target="_blank">remove.bg</a>
                                 </dt>
                                 <dd>
-                                    Remove unwanted backgrounds around icons etc
+                                    - Remove unwanted backgrounds around icons etc
                                 </dd>
                             </div>
                         </dl>
                     </div>
-
                 </div>
+
             </div>
-            <div class="dan-co">dan.co</div>  
-        </footer>
+        <div class="dan-co">dan.co</div>  
+    </footer>
 
     </body>
 </html>

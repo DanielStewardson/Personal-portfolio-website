@@ -6,6 +6,7 @@ body, html, li, ul, nav, div, header, img, input, span, h1, h2, h3, h4, h5, p {
 html {
     box-sizing: border-box;
     font-size: var(--font-size);
+    scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 900px) {
@@ -90,6 +91,26 @@ a[theme=boring] {
 
 img {
     width: 100%;
+}
+
+h1, h2, h3, h4 {
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    line-height: 3rem;
+} 
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
 }
 
 .wrap {
@@ -414,13 +435,6 @@ header {
     font-family: var(--headers-font);
 }
 
-.intro-text h1 {
-    font-weight: lighter;
-    font-size: 1.6rem;
-    letter-spacing: .1rem;
-    line-height: 3rem;
-} 
-
 .down-arrow {
     position: absolute;
     bottom: 1rem;
@@ -520,9 +534,6 @@ header {
     .known-tech-icon {
         padding: 0;
     }
-    .tech-icons {
-        /* flex-direction: column; */
-    }
 } 
 
 /*------------------------------- Footer ----------------------------------*/
@@ -532,10 +543,48 @@ footer {
     padding: 2rem 0 8rem 0;
     width: 100%;
     border-top: solid .3rem var(--main-pop-color);
+    z-index: 1;
+    color: hsl(0, 0%, 100%);
+}
+
+.footer-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.to-top-button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -3%);
+    width: 5rem;
+    height: 2.5rem;
+    background-color: var(--main-pop-color);
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    transition: .4s ease;
+}
+
+.to-top-button:hover {
+    height: 4.5rem;
+}
+
+.up-arrow {
+    position: absolute;
+    left: 50%;
+    transform: rotate(180deg) translate(50%, -20%);
+    bottom: 1rem;
+    width: 2.5rem;
+    transition: .1s;
 }
 
 .resources a {
-    color: var(--main-text-and-accent-color);
+    color: hsl(0, 0%, 100%);
     text-decoration-color: var(--main-pop-color);
 }
 
