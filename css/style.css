@@ -483,21 +483,21 @@ header {
     padding: 4rem 0;
 }
 
-.project-text {
+.text-box {
     line-height: 1.8rem;
     padding: 2rem 0;
 }
 
-.project-text a {
+.text-box a {
     text-decoration: none;
     color: var(--main-pop-color);
 }
 
-.project-text a:hover {
+.text-box a:hover {
     text-decoration: underline;
 }
 
-.project-text h2 {
+.text-box h2 {
     font-family: var(--headers-font);
     font-weight: normal;
     font-size: 3rem;
@@ -513,12 +513,17 @@ header {
 }
 
 @media only screen and (max-width: 680px) {
-    .project-text {
+    .text-box {
         text-align: center
     }
 } 
 
 /*------------------------------- About Section ----------------------------------*/
+
+.about {
+    padding-bottom: 8rem;
+}
+
 .about-container {
     display: flex;
     justify-content: center;
@@ -613,6 +618,10 @@ footer {
     bottom: 1rem;
     width: 2.5rem;
     transition: .1s;
+}
+
+.hire-now {
+    font-size: 1.4rem;
 }
 
 .resources a {
