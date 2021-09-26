@@ -31,6 +31,7 @@ html {
     --background-accent-borders: hsl(0, 0%, 20%);
     --main-font: 'Quicksand', sans-serif;
     --headers-font: 'Monoton', cursive;
+    --background-image: url(../resources/pictures/cool-background.png);
 }
 
 :root[theme=boring] {
@@ -49,6 +50,7 @@ html {
     --background-accent-borders: hsl(0, 0%, 20%);
     --main-font: 'Quicksand', sans-serif;
     --headers-font: 'Monoton', cursive;
+    --background-image: url(../resources/pictures/cool-background-white.png);
 }
 
 body {
@@ -61,7 +63,7 @@ body {
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url(../resources/pictures/cool-background.png);
+    background-image: var(--background-image);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -69,7 +71,7 @@ body {
 }
 
 .background-image[theme=boring] {
-    background-image: url(../resources/pictures/cool-background-white.png);
+    background-image: var(--background-image);
     width: 100%;
     height: 100%;
     top: 0;
@@ -178,11 +180,21 @@ h3 {
 
 .nav-button-label {
     padding: 1rem 0;
-    margin-right: 1rem;
+    margin-right: 1.6rem;
     cursor: pointer;
 }
 
-.nav-button-label span,
+.nav-button-label span {
+    display: block;
+    background-color: var(--main-text-and-accent-color);
+    height: .16rem;
+    width: 1.8rem;
+    position: relative;
+    transition: .5s ease,
+                background-color 0s;
+}
+
+/* .nav-button-label span, */
 .nav-button-label span::before,
 .nav-button-label span::after {
     display: block;
@@ -226,9 +238,9 @@ h3 {
     .nav-button-label {
         position: fixed;
         margin: 0;
-        top: 0;
-        right: 0;
-        border-radius: 0 0 0 4px;
+        top: 7px;
+        right: 7px;
+        border-radius: 4px;
     }
     .nav-button-label[theme=retro] {
         background-color: hsl(0, 0%, 15%);
@@ -265,14 +277,18 @@ h3 {
     position: fixed;
     display: flex;
     align-items: center;
+    justify-content: center;
     top: 150%;
     left: 0;
     right: 0;
     height: 100vh;
     width: 100vw;
-    justify-content: center;
     background-color: var(--background-color); 
-    transition: top .5s ease-out;
+    transition: top .4s ease-out;
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .slide-nav ul {
@@ -308,21 +324,37 @@ h3 {
     animation: blinker 1s step-start infinite;
 }
 
+.slide-nav-social-links {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.social-logo {
+    width: 40px;
+    margin: .2rem;
+}
+
+.social-logo:hover {
+    background-color: var(--main-pop-color);
+}
+
 .nav-button:checked ~ .slide-nav {
     top: 0;
-    transition: top .5s ease-out .3s;
+    transition: top .4s ease-out .3s;
 }
 
 .nav-button:checked ~ .slide-one {
     top: 0;
-    transition: top .5s ease-out;
+    transition: top .4s ease-out;
 }
 
 /*--------------------- focus nav -------------------*/
 
 .slide-nav:focus-within {
     top: 0;
-    transition: top .5s ease-out .3s;
+    transition: top .4s ease-out .3s;
 }
 
 .slide-one {
@@ -334,7 +366,7 @@ h3 {
     height: 100vh;
     width: 100vw;
     background-color: var(--main-pop-color);;
-    transition: top .5s ease-out .3s;
+    transition: top .4s ease-out .3s;
 }
 
 @media only screen and (max-width: 900px) {
@@ -586,10 +618,27 @@ footer {
 .resources a {
     color: hsl(0, 0%, 100%);
     text-decoration-color: var(--main-pop-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.resources a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--main-pop-color);
+    transition: .4s ease;
 }
 
 .resources a:hover {
-    text-decoration: none;
+    color: var(--main-pop-color);
+}
+
+.resources a:hover::after {
+    width: 0;
 }
 
 .resources {
@@ -607,6 +656,13 @@ footer {
 
 .resource-list {
     display: flex;
+}
+
+.footer-seperator-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-pop-color);
 }
 
 .footer-dl {

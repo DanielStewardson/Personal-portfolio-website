@@ -7,10 +7,62 @@
 }
 
 .contact-details {
-    max-width: 45%;
+    max-width: 40%;
 }
 
+.form-dl {    
 
+}
+
+.form-dl a {
+    color: var(--main-text-and-accent-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.form-dl a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--main-pop-color);
+    transition: .4s ease;
+}
+
+.form-dl a:hover {
+    color: var(--main-pop-color);
+}
+.form-dl a:hover::after {
+    width: 0;
+}
+
+.form-dl dt {
+    text-transform: uppercase;
+    color: var(--main-pop-color);
+    /* margin-top: .8rem; */
+}
+
+.form-dl dd {
+    margin: .6rem 0 .8rem 0;
+}
+
+.inline-dt-dd {
+    display: inline-block;
+    padding: 1rem 1.2rem 0 0;
+    max-width: 150px;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 480px) {
+    .inline-dt-dd {
+        display: inline-block;
+        padding: 1rem 0 0 0;
+        max-width: 130px;
+        vertical-align: top;
+    }
+}
 
 /*------------------------------- Form ----------------------------------*/
 
