@@ -485,7 +485,7 @@ header {
 
 .text-box {
     line-height: 1.8rem;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 }
 
 .text-box a {
@@ -514,7 +514,8 @@ header {
 
 @media only screen and (max-width: 680px) {
     .text-box {
-        text-align: center
+        text-align: center;
+        padding: 2rem 0;
     }
 } 
 
@@ -537,17 +538,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-
-.skills-container h3 {
-    padding: 0 2rem;
-    font-family: var(--headers-font);
-    font-weight: normal;
-    text-align: center;
-    font-size: 3rem;
-    letter-spacing: .2rem;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
 }
 
 .tech-icons {
