@@ -238,17 +238,18 @@ h3 {
     .nav-button-label {
         position: fixed;
         margin: 0;
-        top: 7px;
-        right: 7px;
+        padding: 20px 35px 20px 10px;
+        top: 10px;
+        right: -5px;
         border-radius: 4px;
     }
     .nav-button-label[theme=retro] {
-        background-color: hsl(0, 0%, 15%);
-        border: hsl(0, 0%, 15%) solid 4px;
+        background-color: hsla(0, 0%, 0%, 0.4);
+        /* border: hsla(0, 0%, 0%, 0.4) solid 4px; */
     }
     .nav-button-label[theme=boring] {
-        background-color: hsl(0, 0%, 80%);
-        border: hsl(0, 0%, 80%) solid 4px;
+        background-color: hsla(0, 0%, 80%, 0.6);
+        /* border: hsla(0, 0%, 80%) solid 4px; */
     }
 }
 
@@ -257,6 +258,7 @@ h3 {
 .nav-button:checked ~ label span {
     transform: rotate(45deg);
     transition: transform .5s;
+    bottom: 2px;
 }
 
 .nav-button:checked ~ label span::before {
@@ -412,7 +414,7 @@ h3 {
     .retro-mode-label {
         width: 25px;
         height: 58px;
-        right: 6px;
+        right: 15px;
         bottom: 10px;
     }
     .coin-switch {
@@ -485,7 +487,8 @@ header {
 
 .text-box {
     line-height: 1.8rem;
-    padding: 2rem 2rem;
+    padding: 2rem 0;
+    text-align: center;
 }
 
 .text-box a {
@@ -512,26 +515,24 @@ header {
     display: flex;
 }
 
-@media only screen and (max-width: 680px) {
-    .text-box {
-        text-align: center;
-        padding: 2rem 0;
+@media only screen and (min-width: 680px) {
+    .text-box {      
+        max-width: 45%;
     }
 } 
 
 /*------------------------------- About Section ----------------------------------*/
 
 .about {
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
     padding-bottom: 8rem;
 }
 
 .about-container {
     display: flex;
-    justify-content: center;
-}
-
-.skills-container {
-    display: flex;
+    justify-content: space-between;
 }
 
 .skills {
@@ -581,7 +582,7 @@ footer {
     height: 100%;
     background-color: black;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .to-top-button {
@@ -675,16 +676,23 @@ footer {
 
 .footer-dl dd {
     margin: .6rem 0 1.4rem 0;
-    font-size: .8rem;
+    font-size: .9rem;
     line-height: 1.1rem;
 }
 
 .dan-co {
     position: absolute;
     font-size: 1.4rem;
-    bottom: 22px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.footer-social-links {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 @media only screen and (max-width: 480px) {
