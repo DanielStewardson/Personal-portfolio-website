@@ -12,13 +12,12 @@ html {
 :root[theme=retro] {
     --font-size: 16px;
     --font-size-media: 13px;
-    --main-pop-color: hsl(34, 100%, 63%);
+    --main-pop-color: hsl(32, 100%, 53%);
     --accent-pop-color: hsl(34, 100%, 63%);
     --main-text-and-accent-color: hsl(0, 0%, 100%);
-    --button-border: hsl(33, 100%, 42%);
     --button-text: hsl(0, 0%, 92%);
     --button-text-shadow: hsl(33, 100%, 34%);
-    --button-hover-color: hsl(0, 0%, 92%);
+    --button-hover-color: hsl(278, 100%, 36%);
     --background-color: hsl(240, 2%, 16%);
     --backgroundd-accent: hsl(0, 0%, 12%);
     --diagonal-bg-color: hsl(0, 0%, 26%);
@@ -26,7 +25,6 @@ html {
     --background-accent-borders: hsl(0, 0%, 20%);
     --main-font: 'Quicksand', sans-serif;
     --headers-font: 'Monoton', cursive;
-    /* --background-image: url(../resources/pictures/cool-background.png); */
 }
 
 :root[theme=boring] {
@@ -35,10 +33,9 @@ html {
     --main-pop-color: hsl(278, 100%, 36%);
     --accent-pop-color: hsl(34, 100%, 63%);
     --main-text-and-accent-color: hsl(0, 0%, 5%);
-    --button-border: hsl(278, 100%, 66%);
     --button-text: hsl(0, 0%, 92%);
     --button-text-shadow: hsl(33, 100%, 34%);
-    --button-hover-color: hsl(0, 0%, 92%);
+    --button-hover-color: hsl(32, 100%, 53%);
     --background-color: hsl(0, 0%, 96%);
     --backgroundd-accent: hsl(0, 0%, 12%);
     --diagonal-bg-color: hsl(34, 100%, 63%);
@@ -46,35 +43,12 @@ html {
     --background-accent-borders: hsl(0, 0%, 20%);
     --main-font: 'Quicksand', sans-serif;
     --headers-font: 'Monoton', cursive;
-    /* --background-image: url(../resources/pictures/cool-background-white.png); */
 }
 
 body {
     background-color: var(--background-color);
     font-family: var(--main-font);
     color: var(--main-text-and-accent-color);
-}
-
-.background-image[theme=retro] {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-image: var(--background-image);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-}
-
-.background-image[theme=boring] {
-    background-image: var(--background-image);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: fixed;
 }
 
 a[theme=retro] {
@@ -90,22 +64,18 @@ a[theme=boring] {
 img {
     width: 100%;
 }
-
 h1, h2, h3, h4 {
     font-weight: lighter;
 }
-
 h1 {
     font-size: 1.6rem;
     letter-spacing: .1rem;
     line-height: 3rem;
 } 
-
 h2 {
     font-size: 1.5rem;
     line-height: 2.4rem;
 }
-
 h3 {
     font-size: 1.4rem;
     line-height: 2.4rem;
@@ -138,6 +108,23 @@ h3 {
   .blinker {
     animation: blinker 1s step-start infinite;
   }
+
+/*------------------------------ BUTTONS GENERAL----------------------------------*/
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: var(--button-text);
+    background-color: var(--main-pop-color);
+    box-shadow: rgb(0, 0, 0) 0px 10px 20px -10px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-hover-color);
+}
 
 /*------------------------------ Scroll bar ----------------------------------*/
 
@@ -431,27 +418,6 @@ h3 {
         height: 27px;
     }
 }
-/*------------------------------- Big navigation menu buttons ----------------------------------*/
-
-.orange-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--button-text);
-    border: var(--button-border) .4rem groove;
-    background-color: var(--main-pop-color);;
-    text-shadow: 2px 2px var(--button-text-shadow);
-    box-shadow: rgb(0, 0, 0) 0px 20px 20px -10px;
-}
-
-.orange-button:hover,
-.orange-button:focus {
-    background-color: var(--button-hover-color);
-    color: var(--main-pop-color);
-    transform: translate(2px, -3px);
-}
-
 /*------------------------------- Header ----------------------------------*/
 
 header {
@@ -525,7 +491,6 @@ header {
 
 .landing-project-gallery {
     margin: 0 auto;
-    /* width: 80%; */
     max-width: 80rem;
     display: flex;
     flex-direction: column;
@@ -535,7 +500,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 100%; */
     height: 6rem;
 }
 
@@ -557,8 +521,8 @@ header {
 
 .landing-project-tile {
     position: relative;
-    width: 20rem;
-    height: 20rem;
+    width: 16rem;
+    height: 16rem;
 }
 
 .landing-project-tile:hover .landing-project-tile-overlay-top {
@@ -618,7 +582,7 @@ header {
         font-size: .8rem;
     }
     .landing-project-tile {
-        width: 50%;
+        width: 33.3%;
         height: auto;
     }
 } 
