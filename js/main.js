@@ -112,3 +112,36 @@ function setTheme() {
 }
 
 togButton.addEventListener("click", toggle);
+
+/*---------------------------- GALLERY FILTER BUTTONS -------------------------------*/
+
+[document.getElementById('show-all'), document.getElementById('show-react'), 
+document.getElementById('show-javascript')].forEach(item => {
+  item.addEventListener('click', tileFilter)
+});
+
+const reactTile = document.querySelectorAll('.react-tile')
+const jsTile = document.querySelectorAll('.javascript-tile')
+const htmlTile = document.querySelectorAll('.html-tile')
+
+function tileFilter(e) {
+  let id = e.target.id;
+  
+  if (id == 'show-all') {
+    reactTile.forEach(item => item.style.display = 'block');
+    jsTile.forEach(item => item.style.display = 'block');
+    htmlTile.forEach(item => item.style.display = 'block');
+  } else if (id == 'show-react') {
+    reactTile.forEach(item => item.style.display = 'block');
+    htmlTile.forEach(item => item.style.display = 'none');
+    jsTile.forEach(item => item.style.display = 'none');
+  } else if (id == 'show-html') {
+    htmlTile.forEach(item => item.style.display = 'block');
+    jsTile.forEach(item => item.style.display = 'none');
+    reactTile.forEach(item => item.style.display = 'none');
+  }  else if (id == 'show-javascript') {
+    jsTile.forEach(item => item.style.display = 'block');
+    htmlTile.forEach(item => item.style.display = 'none');
+    reactTile.forEach(item => item.style.display = 'none');
+  }
+};
